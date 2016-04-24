@@ -51,7 +51,7 @@ To install it, simply add the following line to your Podfile:
 ```Ruby
 pod 'SmileLock'
 ```
-Or you can drag the [SmileLock](https://github.com/liu044100/SmileLock/tree/master/SmileLock/Classes) folder to your project.
+Or you can drag the [SmileLock](https://github.com/liu044100/Smile-Lock/tree/master/SmileLock/Classes) folder to your project.
 
 # Contributions
 
