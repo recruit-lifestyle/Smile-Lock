@@ -7,7 +7,7 @@
 
 A library for make a beautiful Passcode Lock View.
 
-<img src="SmileLock-Example/demo_gif/demo_show.gif" width="400">
+<img src="SmileLock-Example/demo_gif/demo.gif" width="400">
 
 #What can it do for you?
 
