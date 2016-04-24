@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
                    3. Customize UI.
                    DESC
 
-  s.homepage     = "https://github.com/liu044100/SmileLock"
+  s.homepage     = "https://github.com/liu044100/Smile-Lock"
   s.screenshots  = "https://raw.githubusercontent.com/liu044100/Smile-Lock/master/SmileLock-Example/demo_gif/demo.gif"
   s.license      = { :type => "MIT", :file => "LICENSE" }
 
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '9.0'
   s.requires_arc = true
-  s.source       = { :git => "https://github.com/liu044100/SmileLock.git", :tag => s.version.to_s}
+  s.source       = { :git => "https://github.com/liu044100/Smile-Lock.git", :tag => s.version.to_s}
   s.source_files  = 'SmileLock/Classes/*.{swift}'
   s.resources = ['SmileLock/Assets/*.xib']
   s.frameworks = 'UIKit'
