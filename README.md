@@ -37,7 +37,7 @@ extension ViewController: PasswordInputCompleteProtocol {
 ```
 
 
-#### 3. Customize Lock UI.
+#### 3. Customize UI.
 
 ``` swift
 self.passwordContainerView.tintColor = UIColor.color(.TextColor)
