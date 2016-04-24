@@ -28,6 +28,7 @@ passwordContainerView.delegate = self
 extension ViewController: PasswordInputCompleteProtocol {
     func passwordInputComplete(passwordContainerView: PasswordContainerView, input: String) {
         print("input completed -> \(input)")
+        //handle validation wrong || success
     }
 }
 
