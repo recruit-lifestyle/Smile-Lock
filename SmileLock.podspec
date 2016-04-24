@@ -3,12 +3,13 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "A library for make a beautiful Passcode Lock View."
   s.description  = <<-DESC
-                   1. Live rendering in Storyboard.
-                   2. Support customize Lock UI.
+                   1. Create a beautiful passcode lock view simply.
+                   2. Passcode input completed delegate callback.
+                   3. Customize UI.
                    DESC
 
   s.homepage     = "https://github.com/liu044100/SmileLock"
-  s.screenshots  = ""
+  s.screenshots  = "https://raw.githubusercontent.com/liu044100/Smile-Lock/master/SmileLock-Example/demo_gif/demo.gif"
   s.license      = { :type => "MIT", :file => "LICENSE" }
 
   s.author             = { 'Rain' => 'liu044100@gmail.com' }
