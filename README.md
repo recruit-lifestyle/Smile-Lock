@@ -12,10 +12,34 @@ A library for make a beautiful Passcode Lock View.
 #What can it do for you?
 
 
-#### 1. Live rendering in Storyboard.
+#### 1. Create a beautiful passcode lock view with a few line.
+
+``` swift
+let kPasswordDigit = 6
+self.passwordContainerView = PasswordContainerView.createWithDigit(kPasswordDigit)
+```
+
+#### 2. Simple delegate callback when passcode input completed.
+
+``` swift
+let passwordContainerView: PasswordContainerView = ...
+passwordContainerView.delegate = self
+
+extension ViewController: PasswordInputCompleteProtocol {
+    func passwordInputComplete(passwordContainerView: PasswordContainerView, input: String) {
+        print("input completed -> \(input)")
+    }
+}
+
+```
 
 
-#### 2. Support customize Lock UI.
+#### 3. Support customize Lock UI.
+
+``` swift
+self.passwordContainerView.tintColor = UIColor.color(.TextColor)
+self.passwordContainerView.hightlightedColor = UIColor.color(.Blue)
+```
 
 
 #How to use it for your project?
