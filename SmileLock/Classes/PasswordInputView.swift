@@ -141,13 +141,13 @@ public class PasswordInputView: UIView {
         //update color
         self.backgroundColor = self.borderColor
     }
-
 }
 
 private extension PasswordInputView {
     //MARK: Awake
     func configureSubviews() {
         self.addSubview(self.circleView)
+
         //configure label
         NSLayoutConstraint.addEqualConstraintsFromSubView(self.label, toSuperView: self)
         self.label.textAlignment = .Center
