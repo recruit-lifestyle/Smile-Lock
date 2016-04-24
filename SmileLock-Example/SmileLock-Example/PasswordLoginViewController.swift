@@ -23,16 +23,6 @@ class PasswordLoginViewController: UIViewController {
         self.baseView.backgroundColor = UIColor.clearColor()
         self.configurePasswordView()
     }
-}
-
-private extension PasswordLoginViewController {
-    func configurePasswordView() {
-        self.passwordContainerView = PasswordContainerView.createWithDigit(kPasswordDigit)
-        NSLayoutConstraint.addEqualConstraintsFromSubView(self.passwordContainerView, toSuperView: self.baseView)
-        self.passwordContainerView.delegate = self
-        self.passwordContainerView.tintColor = UIColor.color(.TextColor)
-        self.passwordContainerView.hightlightedColor = UIColor.color(.Blue)
-    }
     
     func validationFail() {
         self.passwordContainerView.wrongPassword()
@@ -43,10 +33,20 @@ private extension PasswordLoginViewController {
     }
 }
 
+private extension PasswordLoginViewController {
+    func configurePasswordView() {
+        self.passwordContainerView = PasswordContainerView.createWithDigit(kPasswordDigit)
+        NSLayoutConstraint.addEqualConstraintsFromSubView(self.passwordContainerView, toSuperView: self.baseView)
+        self.passwordContainerView.delegate = self
+        self.passwordContainerView.tintColor = UIColor.color(.TextColor)
+        self.passwordContainerView.hightlightedColor = UIColor.color(.Blue)
+    }
+}
+
 extension PasswordLoginViewController: PasswordInputCompleteProtocol {
     func passwordInputComplete(passwordContainerView: PasswordContainerView, input: String) {
         print("input completed -> \(input)")
-        self.validationFail()
+        self.performSelector(#selector(PasswordLoginViewController.validationFail), withObject: nil, afterDelay: 0.3)
     }
 }
 

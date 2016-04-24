@@ -72,7 +72,6 @@ public class PasswordContainerView: UIView {
     
     //MARK: Input Wrong
     public func wrongPassword() {
-        print("wrong password")
         self.passwordDotView.shakeAnimationWithCompletion {
             self.inputString = ""
         }
@@ -97,7 +96,6 @@ private extension PasswordContainerView {
 
 extension PasswordContainerView: PasswordInputViewTappedProtocol {
     public func passwordInputView(passwordInputView: PasswordInputView, tappedString: String) {
-        print("button tapped -> \(tappedString)")
         guard inputString.characters.count < passwordDotView.totalDotCount else {
             return
         }
