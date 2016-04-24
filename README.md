@@ -1,9 +1,9 @@
 # SmileLock
 
 [![GitHub Issues](http://img.shields.io/github/issues/liu044100/Smile-Lock.svg?style=flat)](https://github.com/liu044100/Smile-Lock/issues)
-[![Version](https://img.shields.io/cocoapods/v/Smile-Lock.svg?style=flat)](http://cocoadocs.org/docsets/Smile-Lock)
-[![License](https://img.shields.io/cocoapods/l/Smile-Lock.svg?style=flat)](http://cocoadocs.org/docsets/Smile-Lock)
-[![Platform](https://img.shields.io/cocoapods/p/Smile-Lock.svg?style=flat)](http://cocoadocs.org/docsets/Smile-Lock)
+[![Version](https://img.shields.io/cocoapods/v/SmileLock.svg?style=flat)](http://cocoadocs.org/docsets/SmileLock)
+[![License](https://img.shields.io/cocoapods/l/SmileLock.svg?style=flat)](http://cocoadocs.org/docsets/SmileLock)
+[![Platform](https://img.shields.io/cocoapods/p/SmileLock.svg?style=flat)](http://cocoadocs.org/docsets/SmileLock)
 
 A library for make a beautiful Passcode Lock View.
 
