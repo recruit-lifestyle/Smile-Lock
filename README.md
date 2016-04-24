@@ -1,4 +1,4 @@
-# SmileClock
+# SmileLock
 
 [![GitHub Issues](http://img.shields.io/github/issues/liu044100/SmileLock.svg?style=flat)](https://github.com/liu044100/SmileLock/issues)
 [![Version](https://img.shields.io/cocoapods/v/SmileLock.svg?style=flat)](http://cocoadocs.org/docsets/SmileLock)
@@ -7,7 +7,7 @@
 
 A library for make a beautiful Passcode Lock View.
 
-<img src="SmileLock-Example/demo_gif/demo.gif" width="600">
+<img src="SmileLock-Example/demo_gif/demo_show.gif" width="600">
 
 #What can it do for you?
 
