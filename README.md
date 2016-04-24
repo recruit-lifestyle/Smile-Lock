@@ -12,14 +12,14 @@ A library for make a beautiful Passcode Lock View.
 #What can it do for you?
 
 
-#### 1. Create a beautiful passcode lock view with a few line.
+#### 1. Create a beautiful passcode lock view simply.
 
 ``` swift
 let kPasswordDigit = 6
 self.passwordContainerView = PasswordContainerView.createWithDigit(kPasswordDigit)
 ```
 
-#### 2. Simple delegate callback when passcode input completed.
+#### 2. Passcode input completed delegate callback.
 
 ``` swift
 let passwordContainerView: PasswordContainerView = ...
