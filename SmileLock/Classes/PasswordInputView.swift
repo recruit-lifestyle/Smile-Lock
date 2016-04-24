@@ -67,6 +67,7 @@ public class PasswordInputView: UIView {
         }
     }
     
+    //MARK: Init
     public override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -75,6 +76,7 @@ public class PasswordInputView: UIView {
         super.init(coder: aDecoder)
     }
     
+    //MARK: Life Cycle
     #if TARGET_INTERFACE_BUILDER
     override public func willMoveToSuperview(newSuperview: UIView?) {
         self.configureSubviews()
