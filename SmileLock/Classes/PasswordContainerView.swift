@@ -16,13 +16,11 @@ public class PasswordContainerView: UIView {
     //MARK: IBOutlet
     @IBOutlet public var passwordInputViews: [PasswordInputView]!
     @IBOutlet public weak var passwordDotView: PasswordDotView!
-    var deleteButton: UIButton!
     
     //MARK: Property
-    public var delegate: PasswordInputCompleteProtocol?
-    public var isBlur: Bool = false
+    public weak var delegate: PasswordInputCompleteProtocol?
     
-    public var inputString: String = "" {
+    private var inputString: String = "" {
         didSet {
             self.passwordDotView.inputDotCount = self.inputString.characters.count
             self.checkInputComplete()
@@ -48,6 +46,8 @@ public class PasswordContainerView: UIView {
         }
     }
     
+    private var deleteButton: UIButton!
+    private let kDeleteButtonTag = 1
     
     //MARK: Init
     public class func createWithDigit(digit: Int) -> PasswordContainerView {
@@ -64,10 +64,9 @@ public class PasswordContainerView: UIView {
         passwordInputViews.forEach {
             $0.delegate = self
         }
-        self.deleteButton = self.viewWithTag(1) as! UIButton
+        self.deleteButton = self.viewWithTag(kDeleteButtonTag) as! UIButton
         self.deleteButton.titleLabel?.adjustsFontSizeToFitWidth = true
         self.deleteButton.titleLabel?.minimumScaleFactor = 0.5
-        self.isBlur = true
     }
     
     //MARK: Input Wrong
@@ -79,7 +78,7 @@ public class PasswordContainerView: UIView {
     
     //MARK: IBAction
     @IBAction func deleteInputString(sender: AnyObject) {
-        guard self.inputString.characters.count > 0 else {
+        guard self.inputString.characters.count > 0 && !self.passwordDotView.isFull  else {
             return
         }
         self.inputString = String(self.inputString.characters.dropLast())

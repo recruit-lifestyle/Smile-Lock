@@ -23,7 +23,10 @@ public class PasswordInputView: UIView {
     private let fontSizeRatio: CGFloat = 46 / 40
     private let borderWidthRatio: CGFloat = 1 / 26
     private var touchUpFlag = false
-    private var isAnimating = false
+    private var _isAnimating = false
+    public  var isAnimating: Bool {
+        return _isAnimating
+    }
     
     @IBInspectable
     public var numberString: String = "2" {
@@ -177,24 +180,24 @@ private extension PasswordInputView {
     }
     
     func touchDownAnimation() {
-        self.isAnimating = true
+        self._isAnimating = true
         self.tappedAnimation({
             self.touchDownAction()
             }, WithCompletion: {
                 if self.touchUpFlag {
                     self.touchUpAnimation()
                 } else {
-                    self.isAnimating = false
+                    self._isAnimating = false
                 }
         })
     }
     
     func touchUpAnimation() {
-        self.isAnimating = true
+        self._isAnimating = true
         self.tappedAnimation({
             self.touchUpAction()
             }, WithCompletion: {
-                self.isAnimating = false
+                self._isAnimating = false
         })
     }
     
@@ -202,10 +205,7 @@ private extension PasswordInputView {
         UIView.animateWithDuration(0.25, delay: 0, options: [.AllowUserInteraction, .BeginFromCurrentState], animations: {
             animation()
             }) { _ in
-                guard let completion = completion else {
-                    return
-                }
-                completion()
+                completion?()
         }
     }
 }

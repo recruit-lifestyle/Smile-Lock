@@ -38,14 +38,20 @@ public class PasswordDotView: UIView {
             self.setNeedsDisplay()
         }
     }
-    
+
     private var radius: CGFloat = 6
     private let spacingRatio: CGFloat = 2
     private let borderWidthRatio: CGFloat = 1 / 5
     
+    private var _isFull = false
+    public  var isFull: Bool {
+        return _isFull
+    }
+    
     //MARK: Draw
     public override func drawRect(rect: CGRect) {
         super.drawRect(rect)
+        self._isFull = (self.inputDotCount == self.totalDotCount)
         self.strokeColor.setStroke()
         self.fillColor.setFill()
         let isOdd = (self.totalDotCount % 2) != 0
@@ -77,11 +83,9 @@ public class PasswordDotView: UIView {
     private var shakeCount = 0
     private var direction = false
     public func shakeAnimationWithCompletion(completion: () -> ()) {
-        let maxShakeCount = 5;
-        
+        let maxShakeCount = 5
         let centerX = CGRectGetMidX(self.bounds)
         let centerY = CGRectGetMidY(self.bounds)
-        
         var duration = 0.10
         var moveX: CGFloat = 5
         
@@ -92,15 +96,15 @@ public class PasswordDotView: UIView {
         }
         self.shakeAnimation(duration, animation: {
             if !self.direction {
-                self.center = CGPointMake(centerX + moveX, centerY)
+                self.center = CGPoint(x: centerX + moveX, y: centerY)
             } else {
-                self.center = CGPointMake(centerX - moveX, centerY)
+                self.center = CGPoint(x: centerX - moveX, y: centerY)
             }
             }, withCompletion: {
                 if self.shakeCount >= maxShakeCount {
                     self.shakeAnimation(duration, animation: {
                         let realCenterX = CGRectGetMidX(self.superview!.bounds)
-                        self.center = CGPointMake(realCenterX, centerY)
+                        self.center = CGPoint(x: realCenterX, y: centerY)
                         }, withCompletion: {
                             self.direction = false
                             self.shakeCount = 0
@@ -136,24 +140,22 @@ private extension PasswordDotView {
         if (count * radius * 2 + spaceCount * spacing > width) {
             radius = floor((width / (count + spaceCount)) / 2)
         } else {
-            radius = floor(height/2);
+            radius = floor(height / 2);
         }
         self.radius = radius - radius * borderWidthRatio
     }
 
     //MARK: Dots Layout
     func getDotPositions(isOdd: Bool) -> [CGPoint] {
-        var positions = [CGPoint]()
         let centerX = CGRectGetMidX(self.bounds)
         let centerY = CGRectGetMidY(self.bounds)
         let spacing = self.radius * spacingRatio
         let middleIndex = isOdd ? (self.totalDotCount + 1) / 2 : (self.totalDotCount) / 2
         let offSet = isOdd ? 0 : -(self.radius + spacing / 2)
-        (1...self.totalDotCount).forEach { index in
+        let positions: [CGPoint] = (1...self.totalDotCount).map { index in
             let i = CGFloat(middleIndex - index)
             let positionX = centerX - (self.radius * 2 + spacing) * i + offSet
-            let position = CGPoint(x: positionX, y: centerY)
-            positions.append(position)
+            return CGPoint(x: positionX, y: centerY)
         }
         return positions
     }
