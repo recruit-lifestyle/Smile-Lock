@@ -30,6 +30,7 @@ public class PasswordContainerView: UIView {
     
     public override var tintColor: UIColor! {
         didSet {
+            self.deleteButton.setTitleColor(tintColor, forState: .Normal)
             self.passwordDotView.strokeColor = tintColor
             passwordInputViews.forEach {
                 $0.textColor = tintColor
