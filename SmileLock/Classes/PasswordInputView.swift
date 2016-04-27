@@ -31,44 +31,36 @@ public class PasswordInputView: UIView {
     @IBInspectable
     public var numberString: String = "2" {
         didSet {
-            self.updateUI()
+            self.label.text = numberString
         }
     }
     
     @IBInspectable
     public var borderColor: UIColor = UIColor.darkGrayColor() {
         didSet {
-            self.updateUI()
+            self.backgroundColor = borderColor
         }
     }
     
     @IBInspectable
     public var circleBackgroundColor: UIColor = UIColor.whiteColor() {
         didSet {
-            self.updateUI()
-        }
-    }
-
-    @IBInspectable
-    public var highlightBackgroundColor: UIColor = UIColor.redColor() {
-        didSet {
-            self.updateUI()
+            self.circleView.backgroundColor = circleBackgroundColor
         }
     }
     
     @IBInspectable
     public var textColor: UIColor = UIColor.darkGrayColor() {
         didSet {
-            self.updateUI()
+            self.label.textColor = textColor
         }
     }
     
     @IBInspectable
-    public var highlightTextColor: UIColor = UIColor.whiteColor() {
-        didSet {
-            self.updateUI()
-        }
-    }
+    public var highlightBackgroundColor: UIColor = UIColor.redColor()
+    
+    @IBInspectable
+    public var highlightTextColor: UIColor = UIColor.whiteColor()
     
     //MARK: Init
     public override init(frame: CGRect) {
