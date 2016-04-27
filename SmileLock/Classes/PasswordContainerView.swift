@@ -16,6 +16,7 @@ public class PasswordContainerView: UIView {
     //MARK: IBOutlet
     @IBOutlet public var passwordInputViews: [PasswordInputView]!
     @IBOutlet public weak var passwordDotView: PasswordDotView!
+    @IBOutlet weak var deleteButton: UIButton!
     
     //MARK: Property
     public weak var delegate: PasswordInputCompleteProtocol?
@@ -46,9 +47,6 @@ public class PasswordContainerView: UIView {
         }
     }
     
-    private var deleteButton: UIButton!
-    private let kDeleteButtonTag = 1
-    
     //MARK: Init
     public class func createWithDigit(digit: Int) -> PasswordContainerView {
         let bundle = NSBundle(forClass: PasswordContainerView.self)
@@ -64,7 +62,6 @@ public class PasswordContainerView: UIView {
         passwordInputViews.forEach {
             $0.delegate = self
         }
-        self.deleteButton = self.viewWithTag(kDeleteButtonTag) as! UIButton
         self.deleteButton.titleLabel?.adjustsFontSizeToFitWidth = true
         self.deleteButton.titleLabel?.minimumScaleFactor = 0.5
     }
