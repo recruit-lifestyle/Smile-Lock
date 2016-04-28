@@ -21,14 +21,8 @@ class BlurPasswordLoginViewController: UIViewController {
         super.viewDidLoad()
         self.baseView.backgroundColor = UIColor.clearColor()
         self.configurePasswordView()
-        
-        self.passwordContainerView.passwordInputViews.forEach { passwordInputView in
-            let label = passwordInputView.label
-            label.removeFromSuperview()
-            self.view.addSubview(label)
-            label.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.addConstraintsFromView(label, toView: passwordInputView, constraintInsets: UIEdgeInsetsZero)
-        }
+        //because don't want to adopt vibrancy effect for label, so remove label from visual effect view, then add label as subview
+        self.rearrangeLabelFromVisualEffectView()
     }
     
     func validationFail() {
@@ -41,6 +35,15 @@ class BlurPasswordLoginViewController: UIViewController {
 }
 
 private extension BlurPasswordLoginViewController {
+    func rearrangeLabelFromVisualEffectView() {
+        self.passwordContainerView.passwordInputViews.forEach { passwordInputView in
+            let label = passwordInputView.label
+            label.removeFromSuperview()
+            self.view.addSubview(label)
+            label.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.addConstraintsFromView(label, toView: passwordInputView, constraintInsets: UIEdgeInsetsZero)
+        }
+    }
     func configurePasswordView() {
         self.passwordContainerView = PasswordContainerView.createWithDigit(kPasswordDigit)
         NSLayoutConstraint.addEqualConstraintsFromSubView(self.passwordContainerView, toSuperView: self.baseView)
