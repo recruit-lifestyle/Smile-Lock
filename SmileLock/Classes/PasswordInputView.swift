@@ -17,9 +17,9 @@ public class PasswordInputView: UIView {
     //MARK: Property
     public weak var delegate: PasswordInputViewTappedProtocol?
     
-    private let circleView = UIView()
-    private let button = UIButton()
-    private let label = UILabel()
+    let circleView = UIView()
+    let button = UIButton()
+    public let label = UILabel()
     private let fontSizeRatio: CGFloat = 46 / 40
     private let borderWidthRatio: CGFloat = 1 / 26
     private var touchUpFlag = false
@@ -126,6 +126,9 @@ public class PasswordInputView: UIView {
         self.circleView.center = center
         self.circleView.layer.cornerRadius = circleRadius
         self.circleView.backgroundColor = self.circleBackgroundColor
+        //circle view border
+        let showBorder = self.circleView.layer.borderWidth > 0
+        self.circleView.layer.borderWidth = showBorder ? borderWidth : 0
         
         //update mask
         let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2.0 * CGFloat(M_PI), clockwise: false)
