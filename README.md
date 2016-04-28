@@ -10,6 +10,7 @@ A library for make a beautiful Passcode Lock View.
 <img src="SmileLock-Example/demo_gif/smilelock_logo.png" width="600">
 
 <img src="SmileLock-Example/demo_gif/demo.gif" width="400">
+<img src="SmileLock-Example/demo_gif/demo_blur.gif" width="400">
 
 #What can it do for you?
 
@@ -43,6 +44,10 @@ extension ViewController: PasswordInputCompleteProtocol {
 self.passwordContainerView.tintColor = UIColor.color(.TextColor)
 self.passwordContainerView.hightlightedColor = UIColor.color(.Blue)
 ```
+
+#### 4. Visual Effect.
+Choose `BlurPasswordLogin.storyboard` as main storyboard.
+<img src="SmileLock-Example/demo_gif/blur_version.png"">
 
 
 #How to use it for your project?
