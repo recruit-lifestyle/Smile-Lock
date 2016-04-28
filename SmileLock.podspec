@@ -1,11 +1,12 @@
 Pod::Spec.new do |s|
   s.name         = "SmileLock"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "A library for make a beautiful Passcode Lock View."
   s.description  = <<-DESC
                    1. Create a beautiful passcode lock view simply.
                    2. Passcode input completed delegate callback.
                    3. Customize UI.
+                   4. Visual Effect.
                    DESC
 
   s.homepage     = "https://github.com/liu044100/Smile-Lock"
