@@ -3,7 +3,7 @@
 //  SmileLock-ExampleTests
 //
 //  Created by yuchen liu on 4/24/16.
-//  Copyright © 2016 rain. All rights reserved.
+//  Copyright © 2016 Recruit Lifestyle Co., Ltd. All rights reserved.
 //
 
 import XCTest

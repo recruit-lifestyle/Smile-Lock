@@ -1,6 +1,6 @@
 # SmileLock
 
-[![GitHub Issues](http://img.shields.io/github/issues/liu044100/Smile-Lock.svg?style=flat)](https://github.com/liu044100/Smile-Lock/issues)
+[![GitHub Issues](http://img.shields.io/github/issues/recruit-lifestyle/Smile-Lock.svg?style=flat)](https://github.com/recruit-lifestyle/Smile-Lock/issues)
 [![Version](https://img.shields.io/cocoapods/v/SmileLock.svg?style=flat)](http://cocoadocs.org/docsets/SmileLock)
 [![License](https://img.shields.io/cocoapods/l/SmileLock.svg?style=flat)](http://cocoadocs.org/docsets/SmileLock)
 [![Platform](https://img.shields.io/cocoapods/p/SmileLock.svg?style=flat)](http://cocoadocs.org/docsets/SmileLock)
@@ -60,17 +60,27 @@ To install it, simply add the following line to your Podfile:
 ```Ruby
 pod 'SmileLock'
 ```
-Or you can drag the [SmileLock](https://github.com/liu044100/Smile-Lock/tree/master/SmileLock) folder to your project.
+Or you can drag the [SmileLock](https://github.com/recruit-lifestyle/Smile-Lock/tree/master/SmileLock) folder to your project.
 
 # Contributions
 
 * Warmly welcome to submit a pull request.
 
-# Contact
-
-* If you have some advice or find some issue, please contact me.
-* Email [me](liu044100@gmail.com)
+## Credits
+SmileLock is owned an maintained by [RECRUIT LIFESTYLE CO., LTD.](http://www.recruit-lifestyle.co.jp/).
 
 # License
+```
+Copyright (c) 2016 RECRUIT LIFESTYLE CO., LTD.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-SmileLock is available under the MIT license. See the LICENSE file for more info.
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```

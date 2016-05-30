@@ -2,7 +2,7 @@
 //  PasswordView.swift
 //
 //  Created by rain on 4/21/16.
-//  Copyright © 2016 Yuchen Liu All rights reserved.
+//  Copyright © 2016 Recruit Lifestyle Co., Ltd. All rights reserved.
 //
 
 import UIKit

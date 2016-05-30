@@ -9,9 +9,9 @@ Pod::Spec.new do |s|
                    4. Visual Effect.
                    DESC
 
-  s.homepage     = "https://github.com/liu044100/Smile-Lock"
-  s.screenshots  = "https://raw.githubusercontent.com/liu044100/Smile-Lock/master/SmileLock-Example/demo_gif/demo.gif"
-  s.license      = { :type => "MIT", :file => "LICENSE" }
+  s.homepage     = "https://github.com/recruit-lifestyle/Smile-Lock"
+  s.screenshots  = "https://raw.githubusercontent.com/recruit-lifestyle/Smile-Lock/master/SmileLock-Example/demo_gif/demo.gif"
+  s.license      = { :type => "Apache License", :file => "LICENSE" }
 
   s.author             = { 'Rain' => 'liu044100@gmail.com' }
   s.social_media_url   = "https://dribbble.com/yuchenliu"
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '9.0'
   s.requires_arc = true
-  s.source       = { :git => "https://github.com/liu044100/Smile-Lock.git", :tag => s.version.to_s}
+  s.source       = { :git => "https://github.com/recruit-lifestyle/Smile-Lock.git", :tag => s.version.to_s}
   s.source_files  = 'SmileLock/Classes/*.{swift}'
   s.resources = ['SmileLock/Assets/*.xib']
   s.frameworks = 'UIKit'
