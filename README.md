@@ -67,7 +67,7 @@ Or you can drag the [SmileLock](https://github.com/recruit-lifestyle/Smile-Lock/
 * Warmly welcome to submit a pull request.
 
 ## Credits
-SmileLock is owned an maintained by [RECRUIT LIFESTYLE CO., LTD.](http://www.recruit-lifestyle.co.jp/).
+SmileLock is owned and maintained by [RECRUIT LIFESTYLE CO., LTD.](http://www.recruit-lifestyle.co.jp/).
 
 # License
 ```
