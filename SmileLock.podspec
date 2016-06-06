@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SmileLock"
-  s.version      = "0.0.2"
+  s.version      = "1.0.0"
   s.summary      = "A library for make a beautiful Passcode Lock View."
   s.description  = <<-DESC
                    1. Create a beautiful passcode lock view simply.
@@ -14,8 +14,6 @@ Pod::Spec.new do |s|
   s.license      = { :type => "Apache License", :file => "LICENSE" }
 
   s.author             = { 'Rain' => 'liu044100@gmail.com' }
-  s.social_media_url   = "https://dribbble.com/yuchenliu"
-
 
   s.platform     = :ios, '9.0'
   s.requires_arc = true
