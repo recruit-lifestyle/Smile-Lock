@@ -39,7 +39,7 @@ private extension PasswordLoginViewController {
         NSLayoutConstraint.addEqualConstraintsFromSubView(self.passwordContainerView, toSuperView: self.baseView)
         self.passwordContainerView.delegate = self
         self.passwordContainerView.tintColor = UIColor.color(.TextColor)
-        self.passwordContainerView.hightlightedColor = UIColor.color(.Blue)
+        self.passwordContainerView.highlightedColor = UIColor.color(.Blue)
     }
 }
 

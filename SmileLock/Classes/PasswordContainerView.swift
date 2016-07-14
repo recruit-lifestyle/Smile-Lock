@@ -23,22 +23,22 @@ public class PasswordContainerView: UIView {
     
     private var inputString: String = "" {
         didSet {
-            self.passwordDotView.inputDotCount = self.inputString.characters.count
-            self.checkInputComplete()
+            passwordDotView.inputDotCount = inputString.characters.count
+            checkInputComplete()
         }
     }
     
     public var isVibrancyEffect = false {
         didSet {
-            self.configureVibrancyEffect()
+            configureVibrancyEffect()
         }
     }
     
     public override var tintColor: UIColor! {
         didSet {
             if isVibrancyEffect { return }
-            self.deleteButton.setTitleColor(tintColor, forState: .Normal)
-            self.passwordDotView.strokeColor = tintColor
+            deleteButton.setTitleColor(tintColor, forState: .Normal)
+            passwordDotView.strokeColor = tintColor
             passwordInputViews.forEach {
                 $0.textColor = tintColor
                 $0.borderColor = tintColor
@@ -46,12 +46,12 @@ public class PasswordContainerView: UIView {
         }
     }
     
-    public var hightlightedColor: UIColor! {
+    public var highlightedColor: UIColor! {
         didSet {
             if isVibrancyEffect { return }
-            self.passwordDotView.fillColor = hightlightedColor
+            passwordDotView.fillColor = highlightedColor
             passwordInputViews.forEach {
-                $0.highlightBackgroundColor = hightlightedColor
+                $0.highlightBackgroundColor = highlightedColor
             }
         }
     }
@@ -67,34 +67,34 @@ public class PasswordContainerView: UIView {
     
     public override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.clearColor()
         passwordInputViews.forEach {
             $0.delegate = self
         }
-        self.deleteButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        self.deleteButton.titleLabel?.minimumScaleFactor = 0.5
+        deleteButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        deleteButton.titleLabel?.minimumScaleFactor = 0.5
     }
     
     //MARK: Input Wrong
     public func wrongPassword() {
-        self.passwordDotView.shakeAnimationWithCompletion {
+        passwordDotView.shakeAnimationWithCompletion {
             self.inputString = ""
         }
     }
     
     //MARK: IBAction
     @IBAction func deleteInputString(sender: AnyObject) {
-        guard self.inputString.characters.count > 0 && !self.passwordDotView.isFull  else {
+        guard inputString.characters.count > 0 && !passwordDotView.isFull  else {
             return
         }
-        self.inputString = String(self.inputString.characters.dropLast())
+        inputString = String(inputString.characters.dropLast())
     }
 }
 
 private extension PasswordContainerView {
     func checkInputComplete() {
-        if self.inputString.characters.count == self.passwordDotView.totalDotCount {
-            self.delegate?.passwordInputComplete(self, input: self.inputString)
+        if inputString.characters.count == passwordDotView.totalDotCount {
+            delegate?.passwordInputComplete(self, input: inputString)
         }
     }
     func configureVibrancyEffect() {
@@ -114,7 +114,7 @@ private extension PasswordContainerView {
         var textColor: UIColor!
         var highlightTextColor: UIColor!
         
-        if self.isVibrancyEffect {
+        if isVibrancyEffect {
             //delete button
             titleColor = whiteColor
             //dot view
@@ -128,22 +128,22 @@ private extension PasswordContainerView {
             highlightTextColor = whiteColor
         } else {
             //delete button
-            titleColor = self.tintColor
+            titleColor = tintColor
             //dot view
-            strokeColor = self.tintColor
-            fillColor = self.hightlightedColor
+            strokeColor = tintColor
+            fillColor = highlightedColor
             //input view
             circleBackgroundColor = whiteColor
-            highlightBackgroundColor = self.hightlightedColor
-            borderColor = self.tintColor
-            textColor = self.tintColor
-            highlightTextColor = self.hightlightedColor
+            highlightBackgroundColor = highlightedColor
+            borderColor = tintColor
+            textColor = tintColor
+            highlightTextColor = highlightedColor
         }
         
-        self.deleteButton.setTitleColor(titleColor, forState: .Normal)
-        self.passwordDotView.strokeColor = strokeColor
-        self.passwordDotView.fillColor = fillColor
-        self.passwordInputViews.forEach { passwordInputView in
+        deleteButton.setTitleColor(titleColor, forState: .Normal)
+        passwordDotView.strokeColor = strokeColor
+        passwordDotView.fillColor = fillColor
+        passwordInputViews.forEach { passwordInputView in
             passwordInputView.circleBackgroundColor = circleBackgroundColor
             passwordInputView.borderColor = borderColor
             passwordInputView.textColor = textColor
@@ -161,6 +161,6 @@ extension PasswordContainerView: PasswordInputViewTappedProtocol {
         guard inputString.characters.count < passwordDotView.totalDotCount else {
             return
         }
-        self.inputString += tappedString
+        inputString += tappedString
     }
 }
