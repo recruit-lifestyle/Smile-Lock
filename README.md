@@ -42,7 +42,7 @@ extension ViewController: PasswordInputCompleteProtocol {
 
 ``` swift
 self.passwordContainerView.tintColor = UIColor.color(.TextColor)
-self.passwordContainerView.hightlightedColor = UIColor.color(.Blue)
+self.passwordContainerView.highlightedColor = UIColor.color(.Blue)
 ```
 
 #### 4. Visual Effect.

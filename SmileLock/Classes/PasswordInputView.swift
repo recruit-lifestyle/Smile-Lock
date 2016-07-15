@@ -23,36 +23,33 @@ public class PasswordInputView: UIView {
     private let fontSizeRatio: CGFloat = 46 / 40
     private let borderWidthRatio: CGFloat = 1 / 26
     private var touchUpFlag = false
-    private var _isAnimating = false
-    public  var isAnimating: Bool {
-        return _isAnimating
-    }
+    private(set) public var isAnimating = false
     
     @IBInspectable
     public var numberString: String = "2" {
         didSet {
-            self.label.text = numberString
+            label.text = numberString
         }
     }
     
     @IBInspectable
     public var borderColor: UIColor = UIColor.darkGrayColor() {
         didSet {
-            self.backgroundColor = borderColor
+            backgroundColor = borderColor
         }
     }
     
     @IBInspectable
     public var circleBackgroundColor: UIColor = UIColor.whiteColor() {
         didSet {
-            self.circleView.backgroundColor = circleBackgroundColor
+            circleView.backgroundColor = circleBackgroundColor
         }
     }
     
     @IBInspectable
     public var textColor: UIColor = UIColor.darkGrayColor() {
         didSet {
-            self.label.textColor = textColor
+            label.textColor = textColor
         }
     }
     
@@ -74,129 +71,129 @@ public class PasswordInputView: UIView {
     //MARK: Life Cycle
     #if TARGET_INTERFACE_BUILDER
     override public func willMoveToSuperview(newSuperview: UIView?) {
-        self.configureSubviews()
+        configureSubviews()
     }
     #else
     override public func awakeFromNib() {
         super.awakeFromNib()
-        self.configureSubviews()
+        configureSubviews()
     }
     #endif
 
     func touchDown() {
         //delegate callback
-        self.delegate?.passwordInputView(self, tappedString: self.numberString)
+        delegate?.passwordInputView(self, tappedString: numberString)
         
         //now touch down, so set touch up flag --> false
-        self.touchUpFlag = false
-        self.touchDownAnimation()
+        touchUpFlag = false
+        touchDownAnimation()
     }
     
     func touchUp() {
         //now touch up, so set touch up flag --> true
-        self.touchUpFlag = true
+        touchUpFlag = true
         
         //only show touch up animation when touch down animation finished        
-        if !self.isAnimating {
-            self.touchUpAnimation()
+        if !isAnimating {
+            touchUpAnimation()
         }
     }
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-        self.updateUI()
+        updateUI()
     }
     
     private func updateUI() {
         //prepare calculate
-        let width = CGRectGetWidth(self.bounds)
-        let height = CGRectGetHeight(self.bounds)
+        let width = CGRectGetWidth(bounds)
+        let height = CGRectGetHeight(bounds)
         let center = CGPoint(x: width/2, y: height/2)
         let radius = min(width, height) / 2
         let borderWidth = radius * borderWidthRatio
         let circleRadius = radius - borderWidth
         
         //update label
-        self.label.text = self.numberString
-        self.label.font = UIFont.systemFontOfSize( radius * fontSizeRatio, weight: UIFontWeightThin)
-        self.label.textColor = self.textColor
+        label.text = numberString
+        label.font = UIFont.systemFontOfSize( radius * fontSizeRatio, weight: UIFontWeightThin)
+        label.textColor = textColor
         
         //update circle view
-        self.circleView.frame = CGRect(x: 0, y: 0, width: 2 * circleRadius, height: 2 * circleRadius)
-        self.circleView.center = center
-        self.circleView.layer.cornerRadius = circleRadius
-        self.circleView.backgroundColor = self.circleBackgroundColor
+        circleView.frame = CGRect(x: 0, y: 0, width: 2 * circleRadius, height: 2 * circleRadius)
+        circleView.center = center
+        circleView.layer.cornerRadius = circleRadius
+        circleView.backgroundColor = circleBackgroundColor
         //circle view border
-        let showBorder = self.circleView.layer.borderWidth > 0
-        self.circleView.layer.borderWidth = showBorder ? borderWidth : 0
+        let showBorder = circleView.layer.borderWidth > 0
+        circleView.layer.borderWidth = showBorder ? borderWidth : 0
         
         //update mask
         let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2.0 * CGFloat(M_PI), clockwise: false)
         let maskLayer = CAShapeLayer()
         maskLayer.path = path.CGPath
-        self.layer.mask = maskLayer
+        layer.mask = maskLayer
         
         //update color
-        self.backgroundColor = self.borderColor
+        backgroundColor = borderColor
     }
 }
 
 private extension PasswordInputView {
     //MARK: Awake
     func configureSubviews() {
-        self.addSubview(self.circleView)
+        addSubview(circleView)
 
         //configure label
-        NSLayoutConstraint.addEqualConstraintsFromSubView(self.label, toSuperView: self)
-        self.label.textAlignment = .Center
+        NSLayoutConstraint.addEqualConstraintsFromSubView(label, toSuperView: self)
+        label.textAlignment = .Center
         
         //configure button
-        NSLayoutConstraint.addEqualConstraintsFromSubView(self.button, toSuperView: self)
-        self.button.exclusiveTouch = true
-        self.button.addTarget(self, action: #selector(PasswordInputView.touchDown), forControlEvents: [.TouchDown])
-        self.button.addTarget(self, action: #selector(PasswordInputView.touchUp), forControlEvents: [.TouchUpInside, .TouchDragOutside, .TouchCancel, .TouchDragExit])
+        NSLayoutConstraint.addEqualConstraintsFromSubView(button, toSuperView: self)
+        button.exclusiveTouch = true
+        button.addTarget(self, action: #selector(PasswordInputView.touchDown), forControlEvents: [.TouchDown])
+        button.addTarget(self, action: #selector(PasswordInputView.touchUp), forControlEvents: [.TouchUpInside, .TouchDragOutside, .TouchCancel, .TouchDragExit])
     }
     
     //MARK: Animation
     func touchDownAction() {
-        let originFont = self.label.font
-        self.label.font = UIFont.systemFontOfSize(originFont.pointSize, weight: UIFontWeightLight)
-        self.label.textColor = self.highlightTextColor
-        self.backgroundColor = self.highlightBackgroundColor
-        self.circleView.backgroundColor = self.highlightBackgroundColor
+        let originFont = label.font
+        label.font = UIFont.systemFontOfSize(originFont.pointSize, weight: UIFontWeightLight)
+        label.textColor = highlightTextColor
+        backgroundColor = highlightBackgroundColor
+        circleView.backgroundColor = highlightBackgroundColor
     }
     
     func touchUpAction() {
-        let originFont = self.label.font
-        self.label.font = UIFont.systemFontOfSize(originFont.pointSize, weight: UIFontWeightThin)
-        self.label.textColor = self.textColor
-        self.backgroundColor = self.borderColor
-        self.circleView.backgroundColor = self.circleBackgroundColor
+        let originFont = label.font
+        label.font = UIFont.systemFontOfSize(originFont.pointSize, weight: UIFontWeightThin)
+        label.textColor = textColor
+        backgroundColor = borderColor
+        circleView.backgroundColor = circleBackgroundColor
     }
     
     func touchDownAnimation() {
-        self._isAnimating = true
-        self.tappedAnimation({
+        isAnimating = true
+        tappedAnimation ({
             self.touchDownAction()
-            }, WithCompletion: {
+            }, withCompletion: {
                 if self.touchUpFlag {
                     self.touchUpAnimation()
                 } else {
-                    self._isAnimating = false
+                    self.isAnimating = false
                 }
         })
     }
     
     func touchUpAnimation() {
-        self._isAnimating = true
-        self.tappedAnimation({
+        isAnimating = true
+        tappedAnimation ({
             self.touchUpAction()
-            }, WithCompletion: {
-                self._isAnimating = false
+            }, withCompletion: {
+                self.isAnimating = false
         })
     }
     
-    func tappedAnimation(animation: () -> (), WithCompletion completion: (() -> ())?) {
+    func tappedAnimation(animation: () -> (), withCompletion completion: (() -> ())?) {
         UIView.animateWithDuration(0.25, delay: 0, options: [.AllowUserInteraction, .BeginFromCurrentState], animations: {
             animation()
             }) { _ in
