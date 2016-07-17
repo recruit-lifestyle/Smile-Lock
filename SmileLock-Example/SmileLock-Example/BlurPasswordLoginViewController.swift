@@ -21,14 +21,15 @@ class BlurPasswordLoginViewController: UIViewController {
         //create PasswordUIValidation subclass
         self.passwordUIValidation = MyPasswordUIValidation(in: passwordStackView)
         
-        self.passwordUIValidation.success = { _ in
+        self.passwordUIValidation.success = { [weak self] _ in
             print("*️⃣ success!")
-            self.alertForRightPassword { _ in
-                self.passwordUIValidation.resetUI()
+            self?.alertForRightPassword { _ in
+                self?.passwordUIValidation.resetUI()
             }
         }
         
         self.passwordUIValidation.failure = { _ in
+            //do not forget add [weak self] if the view controller become nil at some point during its lifetime
             print("*️⃣ failure!")
         }
         
