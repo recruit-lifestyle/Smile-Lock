@@ -10,52 +10,29 @@ import SmileLock
 
 class BlurPasswordLoginViewController: UIViewController {
 
-    //MARK: IBOutlet
-    @IBOutlet weak var baseView: UIView!
+    @IBOutlet weak var passwordStackView: UIStackView!
     
     //MARK: Property
-    var passwordContainerView: PasswordContainerView!
-    let kPasswordDigit = 6
+    var passwordUIValidation: MyPasswordUIValidation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.baseView.backgroundColor = UIColor.clearColor()
-        self.configurePasswordView()
-        //because don't want to adopt vibrancy effect for label, so remove label from visual effect view, then add label as subview
-        self.rearrangeLabelFromVisualEffectView()
-    }
-    
-    func validationFail() {
-        self.passwordContainerView.wrongPassword()
-    }
-    
-    func validationSuccess() {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-}
-
-private extension BlurPasswordLoginViewController {
-    func rearrangeLabelFromVisualEffectView() {
-        self.passwordContainerView.passwordInputViews.forEach { passwordInputView in
-            let label = passwordInputView.label
-            label.removeFromSuperview()
-            self.view.addSubview(label)
-            label.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.addConstraintsFromView(label, toView: passwordInputView, constraintInsets: UIEdgeInsetsZero)
+        
+        //create PasswordUIValidation subclass
+        self.passwordUIValidation = MyPasswordUIValidation(in: passwordStackView)
+        
+        self.passwordUIValidation.success = { _ in
+            print("*️⃣ success!")
+            self.alertForRightPassword { _ in
+                self.passwordUIValidation.resetUI()
+            }
         }
-    }
-    func configurePasswordView() {
-        self.passwordContainerView = PasswordContainerView.createWithDigit(kPasswordDigit)
-        NSLayoutConstraint.addEqualConstraintsFromSubView(self.passwordContainerView, toSuperView: self.baseView)
-        self.passwordContainerView.delegate = self
-        self.passwordContainerView.isVibrancyEffect = true
-    }
-}
-
-extension BlurPasswordLoginViewController: PasswordInputCompleteProtocol {
-    func passwordInputComplete(passwordContainerView: PasswordContainerView, input: String) {
-        print("input completed -> \(input)")
-        self.performSelector(#selector(PasswordLoginViewController.validationFail), withObject: nil, afterDelay: 0.3)
+        
+        self.passwordUIValidation.failure = { _ in
+            print("*️⃣ failure!")
+        }
+        
+        //visual effect password UI
+        self.passwordUIValidation.view.rearrangeForVisualEffectView(in: self)
     }
 }
-

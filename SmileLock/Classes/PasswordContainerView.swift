@@ -56,6 +56,35 @@ public class PasswordContainerView: UIView {
         }
     }
     
+    //MARK: AutoLayout
+    var width: CGFloat = 0 {
+        didSet {
+            self.widthConstraint.constant = width
+        }
+    }
+    private let kDefaultWidth: CGFloat = 288
+    private let kDefaultHeight: CGFloat = 410
+    private var widthConstraint: NSLayoutConstraint!
+    
+    private func configureConstraints() {
+        let ratioConstraint = self.widthAnchor.constraintEqualToAnchor(self.heightAnchor, multiplier: kDefaultWidth / kDefaultHeight)
+        self.widthConstraint = self.widthAnchor.constraintEqualToConstant(kDefaultWidth)
+        self.widthConstraint.priority = 999
+        NSLayoutConstraint.activateConstraints([ratioConstraint, widthConstraint])
+    }
+    
+    //MARK: VisualEffect
+    public func rearrangeForVisualEffectView(in vc: UIViewController) {
+        self.isVibrancyEffect = true
+        self.passwordInputViews.forEach { passwordInputView in
+            let label = passwordInputView.label
+            label.removeFromSuperview()
+            vc.view.addSubview(label)
+            label.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.addConstraintsFromView(label, toView: passwordInputView, constraintInsets: UIEdgeInsetsZero)
+        }
+    }
+    
     //MARK: Init
     public class func createWithDigit(digit: Int) -> PasswordContainerView {
         let bundle = NSBundle(forClass: PasswordContainerView.self)
@@ -65,8 +94,16 @@ public class PasswordContainerView: UIView {
         return view
     }
     
+    public class func create(in stackView: UIStackView, digit: Int) -> PasswordContainerView {
+        let passwordContainerView = PasswordContainerView.createWithDigit(digit)
+        stackView.addArrangedSubview(passwordContainerView)
+        return passwordContainerView
+    }
+    
+    //MARK: Life Cycle
     public override func awakeFromNib() {
         super.awakeFromNib()
+        self.configureConstraints()
         backgroundColor = UIColor.clearColor()
         passwordInputViews.forEach {
             $0.delegate = self
@@ -78,8 +115,12 @@ public class PasswordContainerView: UIView {
     //MARK: Input Wrong
     public func wrongPassword() {
         passwordDotView.shakeAnimationWithCompletion {
-            self.inputString = ""
+            self.clearInput()
         }
+    }
+    
+    public func clearInput() {
+        self.inputString = ""
     }
     
     //MARK: IBAction

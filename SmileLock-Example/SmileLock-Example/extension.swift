@@ -40,25 +40,11 @@ extension UIColor {
     
 }
 
-extension NSLayoutConstraint {
-    class func addConstraintsFromView(view: UIView, toView baseView: UIView, constraintInsets insets: UIEdgeInsets) {
-        baseView.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: -insets.top)
-        let topConstraint = baseView.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: -insets.top)
-        let bottomConstraint = baseView.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor, constant: insets.bottom)
-        let leftConstraint = baseView.leftAnchor.constraintEqualToAnchor(view.leftAnchor, constant: -insets.left)
-        let rightConstraint = baseView.rightAnchor.constraintEqualToAnchor(view.rightAnchor, constant: insets.right)
-        NSLayoutConstraint.activateConstraints([topConstraint, bottomConstraint, leftConstraint, rightConstraint])
-    }
-    
-    class func addEqualConstraintsFromSubView(subView: UIView, toSuperView superView: UIView) {
-        superView.addSubview(subView)
-        subView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.addConstraintsFromView(subView, toView: superView, constraintInsets: UIEdgeInsetsZero)
-    }
-    
-    class func addConstraintsFromSubView(subView: UIView, toSuperView superView: UIView, constraintInsets insets: UIEdgeInsets) {
-        superView.addSubview(subView)
-        subView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.addConstraintsFromView(subView, toView: superView, constraintInsets: insets)
+extension UIViewController {
+    func alertForRightPassword(okHandle: UIAlertAction -> Void) {
+        let alert = UIAlertController(title: "Right Password", message: nil, preferredStyle: .Alert)
+        let ok = UIAlertAction(title: "OK", style: .Default, handler: okHandle)
+        alert.addAction(ok)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }

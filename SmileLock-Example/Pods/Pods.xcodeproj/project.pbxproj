@@ -10,11 +10,11 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>069390188CAFBC3799C5D13A083898AF</key>
+		<key>01F188A32BBE6CA625132BD9A1C60AF4</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>B80504220F5210D9394ECA5B6D68FEC0</string>
+				<string>C3A3702CB3F5DE811F7087C1849D1844</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -22,6 +22,19 @@
 			<string>SmileLock</string>
 			<key>path</key>
 			<string>SmileLock</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0C56AA50158983C14B71275CEA70B9D8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>PasswordDotView.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -64,6 +77,13 @@
 			<string>iOS</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C2EA93DE8622D1F11F2AD00654133D3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4B18169A700B612B3F863F2CE365671A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>1F23995B81956D585EB9281F3BF20F78</key>
 		<dict>
@@ -216,6 +236,23 @@
 				</array>
 			</dict>
 		</dict>
+		<key>38EE4349EB98E1A3F83DACFA49019A3C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9AC6AD1F5EC6781206FB74497FC6C452</string>
+				<string>8CFE613F803FB380D04F91F83557ECDF</string>
+				<string>571934E483C4FB6ED8CAF608ED5C81BD</string>
+				<string>1C2EA93DE8622D1F11F2AD00654133D3</string>
+				<string>F4B08B5694432633703DD3768EE5B7D7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>3B28F9A90171048B9900CEE2EDC25EFE</key>
 		<dict>
 			<key>explicitFileType</key>
@@ -317,6 +354,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>4B18169A700B612B3F863F2CE365671A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>PasswordUIValidation.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>4BD378915EC7641FC9FF636C25650955</key>
 		<dict>
 			<key>children</key>
@@ -384,6 +434,13 @@
 			<string>SmileLock.modulemap</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>571934E483C4FB6ED8CAF608ED5C81BD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>70AC8DB3251E1463F761E3CEF88D548A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>5CE5176205D06FF3FFE3DDDA9291E44B</key>
 		<dict>
@@ -457,19 +514,6 @@
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Debug</string>
-		</dict>
-		<key>5FD61CD819AD627015F2C0908576950A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PasswordInputView.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>645B1C00632CFF9AB73E7F2E2F073569</key>
 		<dict>
@@ -611,13 +655,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>6C4A1FBFF6FF04F5BF1AA27EBE59337C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5FD61CD819AD627015F2C0908576950A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>6CD51A3DA013EAC2D3E737E8389FB8E3</key>
 		<dict>
 			<key>children</key>
@@ -643,6 +680,19 @@
 			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>70AC8DB3251E1463F761E3CEF88D548A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>PasswordInputView.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>74857149DC1E0D599B8A01A78349A926</key>
 		<dict>
@@ -903,6 +953,13 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>8CFE613F803FB380D04F91F83557ECDF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0C56AA50158983C14B71275CEA70B9D8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>8EE3A08FFE7DC4305682A03AB1F1D35E</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -914,23 +971,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A6FC051CF7A031E3BC2DBF12F3CD3C24</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PasswordDotView.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ACD0BA45A3D4CF6DE2D02803FA0666B1</key>
+		<key>9AC6AD1F5EC6781206FB74497FC6C452</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C7499353BE8C9C36CAB3150CA0132947</string>
+			<string>BD46E949AD03ABCDCFB9E67056E4EDD7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -947,7 +991,7 @@
 			<string>D2C38261456D4EB57E33C5A980F2CBC2</string>
 			<key>buildPhases</key>
 			<array>
-				<string>FADDB6CC74CDB776732115258769BFAB</string>
+				<string>38EE4349EB98E1A3F83DACFA49019A3C</string>
 				<string>7DCA719CABDAEB692EF742B547DB074D</string>
 				<string>0EDB83ACFBA99701672E9C378B9C2C67</string>
 				<string>7FAFEB6DB1041F673CB82C504D6115F6</string>
@@ -994,23 +1038,6 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>B80504220F5210D9394ECA5B6D68FEC0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CE3D82830AAB53372DCA49FCF41C1DD4</string>
-				<string>A6FC051CF7A031E3BC2DBF12F3CD3C24</string>
-				<string>5FD61CD819AD627015F2C0908576950A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Classes</string>
-			<key>path</key>
-			<string>Classes</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1041,6 +1068,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>BD46E949AD03ABCDCFB9E67056E4EDD7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>PasswordContainerView.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>C3709C2AF566A83120B5C5CD63605DA1</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1051,6 +1091,24 @@
 			<string>text.plist.xml</string>
 			<key>path</key>
 			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C3A3702CB3F5DE811F7087C1849D1844</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BD46E949AD03ABCDCFB9E67056E4EDD7</string>
+				<string>0C56AA50158983C14B71275CEA70B9D8</string>
+				<string>70AC8DB3251E1463F761E3CEF88D548A</string>
+				<string>4B18169A700B612B3F863F2CE365671A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Classes</string>
+			<key>path</key>
+			<string>Classes</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1085,7 +1143,7 @@
 			<key>children</key>
 			<array>
 				<string>EBA51959EC36C9C1077C6297B8832B47</string>
-				<string>069390188CAFBC3799C5D13A083898AF</string>
+				<string>01F188A32BBE6CA625132BD9A1C60AF4</string>
 				<string>4BD378915EC7641FC9FF636C25650955</string>
 			</array>
 			<key>isa</key>
@@ -1116,19 +1174,6 @@
 			<string>C3B7BDF5CE5CB8F095FE12DA55D9A9BB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>CE3D82830AAB53372DCA49FCF41C1DD4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PasswordContainerView.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D2C38261456D4EB57E33C5A980F2CBC2</key>
 		<dict>
@@ -1211,13 +1256,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E0D7F5F6602E115ACC260A201D1E1310</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A6FC051CF7A031E3BC2DBF12F3CD3C24</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>E38552F76952B8C7F08BFF635C3DD111</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1230,13 +1268,6 @@
 			<string>SmileLock.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E5BD31214030E0D3BE79D2B6C7E44EF8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CE3D82830AAB53372DCA49FCF41C1DD4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>EBA51959EC36C9C1077C6297B8832B47</key>
 		<dict>
@@ -1251,21 +1282,12 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>FADDB6CC74CDB776732115258769BFAB</key>
+		<key>F4B08B5694432633703DD3768EE5B7D7</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E5BD31214030E0D3BE79D2B6C7E44EF8</string>
-				<string>E0D7F5F6602E115ACC260A201D1E1310</string>
-				<string>6C4A1FBFF6FF04F5BF1AA27EBE59337C</string>
-				<string>ACD0BA45A3D4CF6DE2D02803FA0666B1</string>
-			</array>
+			<key>fileRef</key>
+			<string>C7499353BE8C9C36CAB3150CA0132947</string>
 			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>FCD87314556A682A8D437450BB2D14E4</key>
 		<dict>
