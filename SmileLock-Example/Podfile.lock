@@ -1,5 +1,5 @@
 PODS:
-  - SmileLock (0.0.1)
+  - SmileLock (1.1.0)
 
 DEPENDENCIES:
   - SmileLock (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SmileLock: 00bc09c87b9f97e8bc6851ced22b4954bc5cdae6
+  SmileLock: 66792f268e7737de0d6ed4ca448c40881fef19c2
 
 COCOAPODS: 0.39.0
