@@ -93,7 +93,7 @@ public class PasswordInputView: UIView {
         //now touch up, so set touch up flag --> true
         touchUpFlag = true
         
-        //only show touch up animation when touch down animation finished        
+        //only show touch up animation when touch down animation finished
         if !isAnimating {
             touchUpAnimation()
         }
@@ -194,10 +194,8 @@ private extension PasswordInputView {
     }
     
     func tappedAnimation(animation: () -> (), withCompletion completion: (() -> ())?) {
-        UIView.animateWithDuration(0.25, delay: 0, options: [.AllowUserInteraction, .BeginFromCurrentState], animations: {
-            animation()
-            }) { _ in
-                completion?()
+        UIView.animateWithDuration(0.25, delay: 0, options: [.AllowUserInteraction, .BeginFromCurrentState], animations: animation) { _ in
+            completion?()
         }
     }
 }

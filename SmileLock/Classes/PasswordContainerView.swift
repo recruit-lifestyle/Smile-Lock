@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 public protocol PasswordInputCompleteProtocol: class {
     func passwordInputComplete(passwordContainerView: PasswordContainerView, input: String)
+    func touchAuthenticationComplete(passwordContainerView: PasswordContainerView, success: Bool)
 }
 
 public class PasswordContainerView: UIView {
@@ -17,9 +19,11 @@ public class PasswordContainerView: UIView {
     @IBOutlet public var passwordInputViews: [PasswordInputView]!
     @IBOutlet public weak var passwordDotView: PasswordDotView!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var touchAuthenticationButton: UIButton!
     
     //MARK: Property
     public weak var delegate: PasswordInputCompleteProtocol?
+    private let touchIDContext = LAContext()
     
     private var inputString: String = "" {
         didSet {
@@ -39,6 +43,7 @@ public class PasswordContainerView: UIView {
             if isVibrancyEffect { return }
             deleteButton.setTitleColor(tintColor, forState: .Normal)
             passwordDotView.strokeColor = tintColor
+            touchAuthenticationButton.tintColor = tintColor
             passwordInputViews.forEach {
                 $0.textColor = tintColor
                 $0.borderColor = tintColor
@@ -55,6 +60,20 @@ public class PasswordContainerView: UIView {
             }
         }
     }
+    
+    public var isTouchAuthenticationAvailable: Bool {
+        return touchIDContext.canEvaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, error: nil)
+    }
+    
+    public var touchAuthenticationEnabled = false {
+        didSet {
+            let enable = (isTouchAuthenticationAvailable && touchAuthenticationEnabled)
+            touchAuthenticationButton.alpha = enable ? 1.0 : 0.0
+            touchAuthenticationButton.userInteractionEnabled = enable
+        }
+    }
+    
+    public var touchAuthenticationReason = "Touch to unlock"
     
     //MARK: AutoLayout
     var width: CGFloat = 0 {
@@ -110,6 +129,10 @@ public class PasswordContainerView: UIView {
         }
         deleteButton.titleLabel?.adjustsFontSizeToFitWidth = true
         deleteButton.titleLabel?.minimumScaleFactor = 0.5
+        touchAuthenticationEnabled = true
+        let image = touchAuthenticationButton.imageView?.image?.imageWithRenderingMode(.AlwaysTemplate)
+        touchAuthenticationButton.setImage(image, forState: .Normal)
+        touchAuthenticationButton.tintColor = tintColor
     }
     
     //MARK: Input Wrong
@@ -125,10 +148,20 @@ public class PasswordContainerView: UIView {
     
     //MARK: IBAction
     @IBAction func deleteInputString(sender: AnyObject) {
-        guard inputString.characters.count > 0 && !passwordDotView.isFull  else {
+        guard inputString.characters.count > 0 && !passwordDotView.isFull else {
             return
         }
         inputString = String(inputString.characters.dropLast())
+    }
+    
+    @IBAction func touchAuthenticationAction(sender: UIButton) {
+        if isTouchAuthenticationAvailable {
+            touchIDContext.evaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, localizedReason: touchAuthenticationReason) { (success, error) in
+                dispatch_async(dispatch_get_main_queue(), { 
+                    self.delegate?.touchAuthenticationComplete(self, success: success)
+                })
+            }
+        }
     }
 }
 
@@ -184,6 +217,7 @@ private extension PasswordContainerView {
         deleteButton.setTitleColor(titleColor, forState: .Normal)
         passwordDotView.strokeColor = strokeColor
         passwordDotView.fillColor = fillColor
+        touchAuthenticationButton.tintColor = strokeColor
         passwordInputViews.forEach { passwordInputView in
             passwordInputView.circleBackgroundColor = circleBackgroundColor
             passwordInputView.borderColor = borderColor
