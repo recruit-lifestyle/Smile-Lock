@@ -23,4 +23,13 @@ class MyPasswordUIValidation: PasswordUIValidation<MyPasswordModel> {
             MyPasswordModel.match(password)
         }
     }
+    //handle Touch ID
+    override func touchAuthenticationComplete(passwordContainerView: PasswordContainerView, success: Bool) {
+        if success {
+            let dummyModel = MyPasswordModel()
+            self.success?(dummyModel)
+        } else {
+            self.failure?()
+        }
+    }
 }

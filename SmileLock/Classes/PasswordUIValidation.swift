@@ -5,7 +5,7 @@
 //  Copyright © 2016 Recruit Lifestyle Co., Ltd. All rights reserved.
 //
 
-public class PasswordUIValidation<T> {
+public class PasswordUIValidation<T>: PasswordInputCompleteProtocol {
     public typealias Failure    = Void -> Void
     public typealias Success    = T -> Void
     public typealias Validation = String -> T?
@@ -27,9 +27,8 @@ public class PasswordUIValidation<T> {
     public func resetUI() {
         view.clearInput()
     }
-}
-
-extension PasswordUIValidation: PasswordInputCompleteProtocol {
+    
+    //MARK: PasswordInputCompleteProtocol
     public func passwordInputComplete(passwordContainerView: PasswordContainerView, input: String) {
         guard let model = self.validation?(input) else {
             passwordContainerView.wrongPassword()
