@@ -18,14 +18,14 @@ public class PasswordUIValidation<T> {
     public var view: PasswordContainerView!
     
     public init(in stackView: UIStackView, width: CGFloat? = nil, digit: Int) {
-        self.view = PasswordContainerView.create(in: stackView, digit: digit)
-        self.view.delegate = self
+        view = PasswordContainerView.create(in: stackView, digit: digit)
+        view.delegate = self
         guard let width = width else { return }
-        self.view.width = width
+        view.width = width
     }
     
     public func resetUI() {
-        self.view.clearInput()
+        view.clearInput()
     }
 }
 
@@ -33,9 +33,11 @@ extension PasswordUIValidation: PasswordInputCompleteProtocol {
     public func passwordInputComplete(passwordContainerView: PasswordContainerView, input: String) {
         guard let model = self.validation?(input) else {
             passwordContainerView.wrongPassword()
-            self.failure?()
+            failure?()
             return
         }
-        self.success?(model)
+        success?(model)
     }
+    
+    public func touchAuthenticationComplete(passwordContainerView: PasswordContainerView, success: Bool) {}
 }

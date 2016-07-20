@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source       = { :git => "https://github.com/recruit-lifestyle/Smile-Lock.git", :tag => s.version.to_s}
   s.source_files  = 'SmileLock/Classes/*.{swift}'
-  s.resources = ['SmileLock/Assets/*.xib']
+  s.resources = 'SmileLock/Assets/*'
   s.frameworks = 'UIKit'
 
 end
