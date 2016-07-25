@@ -229,7 +229,7 @@ private extension PasswordContainerView {
             passwordInputView.highlightBackgroundColor = highlightBackgroundColor
             passwordInputView.circleView.layer.borderColor = UIColor.whiteColor().CGColor
             //borderWidth as a flag, will recalculate in PasswordInputView.updateUI()
-            passwordInputView.circleView.layer.borderWidth = isVibrancyEffect ? 1 : 0
+            passwordInputView.isVibrancyEffect = isVibrancyEffect
         }
     }
 }

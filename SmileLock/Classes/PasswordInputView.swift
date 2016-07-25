@@ -24,6 +24,7 @@ public class PasswordInputView: UIView {
     private let borderWidthRatio: CGFloat = 1 / 26
     private var touchUpFlag = false
     private(set) public var isAnimating = false
+    var isVibrancyEffect = false
     
     @IBInspectable
     public var numberString: String = "2" {
@@ -124,8 +125,7 @@ public class PasswordInputView: UIView {
         circleView.layer.cornerRadius = circleRadius
         circleView.backgroundColor = circleBackgroundColor
         //circle view border
-        let showBorder = circleView.layer.borderWidth > 0
-        circleView.layer.borderWidth = showBorder ? borderWidth : 0
+        circleView.layer.borderWidth = isVibrancyEffect ? borderWidth : 0
         
         //update mask
         let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2.0 * CGFloat(M_PI), clockwise: false)
@@ -159,7 +159,9 @@ private extension PasswordInputView {
         let originFont = label.font
         label.font = UIFont.systemFontOfSize(originFont.pointSize, weight: UIFontWeightLight)
         label.textColor = highlightTextColor
-        backgroundColor = highlightBackgroundColor
+        if !self.isVibrancyEffect {
+            backgroundColor = highlightBackgroundColor
+        }
         circleView.backgroundColor = highlightBackgroundColor
     }
     
