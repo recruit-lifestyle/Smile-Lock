@@ -47,7 +47,7 @@ extension ViewController: PasswordInputCompleteProtocol {
         if success {
             //authentication success
         } else {
-            passwordContainerView.clearInput()
+            passwordContainerView.wrongPassword()
         }
     }
 }
