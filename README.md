@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/SmileLock.svg?style=flat)](http://cocoadocs.org/docsets/SmileLock)
 [![Platform](https://img.shields.io/cocoapods/p/SmileLock.svg?style=flat)](http://cocoadocs.org/docsets/SmileLock)
 
-A library for make a beautiful Passcode Lock View.
+A library for make a beautiful Passcode Lock View, also support Touch ID.
 
 <img src="SmileLock-Example/demo_gif/smilelock_logo.png" width="600">
 
