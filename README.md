@@ -78,7 +78,7 @@ pod 'SmileLock'
 Or you can drag the [SmileLock](https://github.com/recruit-lifestyle/Smile-Lock/tree/master/SmileLock) folder to your project.
 
 # Another Approach
-You can subclass `PasswordUIValidation` for a more simple & elegant code.
+You can subclass `PasswordUIValidation` for a more simple & elegant code. More detail please refer `BlurPasswordLoginViewController.swift`.
 
 ```swift
 override func viewDidLoad() {
