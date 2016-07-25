@@ -130,7 +130,7 @@ private extension PasswordDotView {
     func updateRadius() {
         let width = CGRectGetWidth(bounds)
         let height = CGRectGetHeight(bounds)
-        var radius = height / 2 - height / 2 * borderWidthRatio
+        radius = height / 2 - height / 2 * borderWidthRatio
         let spacing = radius * spacingRatio
         let count = CGFloat(totalDotCount)
         let spaceCount = count - 1

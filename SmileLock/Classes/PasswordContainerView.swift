@@ -76,7 +76,7 @@ public class PasswordContainerView: UIView {
     public var touchAuthenticationReason = "Touch to unlock"
     
     //MARK: AutoLayout
-    var width: CGFloat = 0 {
+    public var width: CGFloat = 0 {
         didSet {
             self.widthConstraint.constant = width
         }
