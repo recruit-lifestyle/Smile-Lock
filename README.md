@@ -37,15 +37,30 @@ extension ViewController: PasswordInputCompleteProtocol {
 
 ```
 
+#### 3. Touch ID.
 
-#### 3. Customize UI.
+Thanks for the contribution of [Piotr Sochalewski](https://github.com/sochalewski).👍
+
+``` swift
+extension ViewController: PasswordInputCompleteProtocol {
+     func touchAuthenticationComplete(passwordContainerView: PasswordContainerView, success: Bool) {
+        if success {
+            //authentication success
+        } else {
+            passwordContainerView.clearInput()
+        }
+    }
+}
+```
+
+#### 4. Customize UI.
 
 ``` swift
 self.passwordContainerView.tintColor = UIColor.color(.TextColor)
 self.passwordContainerView.highlightedColor = UIColor.color(.Blue)
 ```
 
-#### 4. Visual Effect.
+#### 5. Visual Effect.
 If you want to see visual effect verison (blur view and vibrancy view), choose `BlurPasswordLogin.storyboard` as main storyboard.
 
 <img src="SmileLock-Example/demo_gif/blur_version.png"">
