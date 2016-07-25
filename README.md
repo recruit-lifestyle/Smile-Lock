@@ -77,6 +77,32 @@ pod 'SmileLock'
 ```
 Or you can drag the [SmileLock](https://github.com/recruit-lifestyle/Smile-Lock/tree/master/SmileLock) folder to your project.
 
+# Another Approach
+You can subclass `PasswordUIValidation` for a more simple & elegant code.
+
+```swift
+override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //create PasswordUIValidation subclass
+        self.passwordUIValidation = MyPasswordUIValidation(in: passwordStackView)
+        
+        self.passwordUIValidation.success = { [weak self] _ in
+            print("*️⃣ success!")
+            self?.alertForRightPassword { _ in
+                self?.passwordUIValidation.resetUI()
+            }
+        }
+        
+        self.passwordUIValidation.failure = { _ in
+            //do not forget add [weak self] if the view controller become nil at some point during its lifetime
+            print("*️⃣ failure!")
+        }
+        
+        ...
+    }
+```
+
 # Contributions
 
 * Warmly welcome to submit a pull request.
