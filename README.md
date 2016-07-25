@@ -52,7 +52,7 @@ extension ViewController: PasswordInputCompleteProtocol {
     }
 }
 ```
-<img src="SmileLock-Example/demo_gif/touch_id.png" width="400">
+<img src="SmileLock-Example/demo_gif/touch_id.png" width="300">
 
 #### 4. Customize UI.
 
