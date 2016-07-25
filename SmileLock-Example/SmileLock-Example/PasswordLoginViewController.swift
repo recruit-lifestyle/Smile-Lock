@@ -14,29 +14,54 @@ class PasswordLoginViewController: UIViewController {
     @IBOutlet weak var passwordStackView: UIStackView!
     
     //MARK: Property
-    var passwordUIValidation: MyPasswordUIValidation!
+    var passwordContainerView: PasswordContainerView!
+    let kPasswordDigit = 6
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //create PasswordUIValidation subclass
-        self.passwordUIValidation = MyPasswordUIValidation(in: passwordStackView)
-        
-        self.passwordUIValidation.success = { [weak self] _ in
-            print("*️⃣ success!")
-            self?.alertForRightPassword { _ in
-                self?.passwordUIValidation.resetUI()
-            }
-        }
-        
-        self.passwordUIValidation.failure = { _ in
-            //do not forget add [weak self] if the view controller become nil at some point during its lifetime
-            print("*️⃣ failure!")
-        }
+        //create PasswordContainerView
+        self.passwordContainerView = PasswordContainerView.create(in: passwordStackView, digit: kPasswordDigit)
+        passwordContainerView.delegate = self
         
         //customize password UI
-        self.passwordUIValidation.view.tintColor = UIColor.color(.TextColor)
-        self.passwordUIValidation.view.highlightedColor = UIColor.color(.Blue)
-        
+        self.passwordContainerView.tintColor = UIColor.color(.TextColor)
+        self.passwordContainerView.highlightedColor = UIColor.color(.Blue)
+    }
+}
+
+extension PasswordLoginViewController: PasswordInputCompleteProtocol {
+    func passwordInputComplete(passwordContainerView: PasswordContainerView, input: String) {
+        if self.validation(input) {
+            self.validationSuccess()
+        } else {
+            self.validationFail()
+        }
+    }
+    
+    func touchAuthenticationComplete(passwordContainerView: PasswordContainerView, success: Bool) {
+        if success {
+            self.validationSuccess()
+        } else {
+            self.validationFail()
+        }
+    }
+}
+
+private extension PasswordLoginViewController {
+    func validation(input: String) -> Bool {
+        return input == "123456"
+    }
+    
+    func validationSuccess() {
+        print("*️⃣ success!")
+        self.alertForRightPassword {[unowned self] _ in
+            self.passwordContainerView.clearInput()
+        }
+    }
+    
+    func validationFail() {
+        print("*️⃣ failure!")
+        self.passwordContainerView.wrongPassword()
     }
 }
