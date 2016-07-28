@@ -55,9 +55,7 @@ private extension PasswordLoginViewController {
     
     func validationSuccess() {
         print("*️⃣ success!")
-        self.alertForRightPassword {[unowned self] _ in
-            self.passwordContainerView.clearInput()
-        }
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func validationFail() {

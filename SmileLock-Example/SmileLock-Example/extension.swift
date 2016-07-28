@@ -39,12 +39,3 @@ extension UIColor {
     }
     
 }
-
-extension UIViewController {
-    func alertForRightPassword(okHandle: UIAlertAction -> Void) {
-        let alert = UIAlertController(title: "Right Password", message: nil, preferredStyle: .Alert)
-        let ok = UIAlertAction(title: "OK", style: .Default, handler: okHandle)
-        alert.addAction(ok)
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
-}

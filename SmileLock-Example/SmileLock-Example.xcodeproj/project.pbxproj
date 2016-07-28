@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		95284A1808A8C082E917AD51 /* Pods_SmileLock_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA1702F1AC31AA3EDCA5FE7 /* Pods_SmileLock_Example.framework */; };
 		B7A42F881CD2588B00FEB7B0 /* BlurPasswordLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A42F861CD2588B00FEB7B0 /* BlurPasswordLoginViewController.swift */; };
-		B7A42F891CD2588B00FEB7B0 /* BlurPasswordLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A42F871CD2588B00FEB7B0 /* BlurPasswordLogin.storyboard */; };
 		B7BAFB411D3B521F009E70FA /* MyPasswordUIValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BAFB401D3B521F009E70FA /* MyPasswordUIValidation.swift */; };
+		B7E18F281D4A0F3F00A740D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E18F271D4A0F3F00A740D4 /* HomeViewController.swift */; };
 		B7E3A1AE1CCC6449005F680E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E3A1AD1CCC6449005F680E /* AppDelegate.swift */; };
 		B7E3A1B51CCC6449005F680E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E3A1B41CCC6449005F680E /* Assets.xcassets */; };
 		B7E3A1B81CCC6449005F680E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E3A1B61CCC6449005F680E /* LaunchScreen.storyboard */; };
@@ -42,8 +42,8 @@
 		3DA1702F1AC31AA3EDCA5FE7 /* Pods_SmileLock_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmileLock_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C52457304DEFE4405D2D34B /* Pods-SmileLock-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmileLock-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmileLock-Example/Pods-SmileLock-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B7A42F861CD2588B00FEB7B0 /* BlurPasswordLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurPasswordLoginViewController.swift; sourceTree = "<group>"; };
-		B7A42F871CD2588B00FEB7B0 /* BlurPasswordLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BlurPasswordLogin.storyboard; sourceTree = "<group>"; };
 		B7BAFB401D3B521F009E70FA /* MyPasswordUIValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPasswordUIValidation.swift; sourceTree = "<group>"; };
+		B7E18F271D4A0F3F00A740D4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B7E3A1AA1CCC6448005F680E /* SmileLock-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmileLock-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E3A1AD1CCC6449005F680E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7E3A1B41CCC6449005F680E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,8 +133,8 @@
 				B7E3A1E31CCC68A3005F680E /* extension.swift */,
 				B7BAFB401D3B521F009E70FA /* MyPasswordUIValidation.swift */,
 				B7E3A1DF1CCC67A4005F680E /* PasswordLoginViewController.swift */,
+				B7E18F271D4A0F3F00A740D4 /* HomeViewController.swift */,
 				B7A42F861CD2588B00FEB7B0 /* BlurPasswordLoginViewController.swift */,
-				B7A42F871CD2588B00FEB7B0 /* BlurPasswordLogin.storyboard */,
 				B7E3A1E01CCC67A4005F680E /* PasswordLogin.storyboard */,
 				B7E3A1B41CCC6449005F680E /* Assets.xcassets */,
 				B7E3A1B61CCC6449005F680E /* LaunchScreen.storyboard */,
@@ -268,7 +268,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7A42F891CD2588B00FEB7B0 /* BlurPasswordLogin.storyboard in Resources */,
 				B7E3A1B81CCC6449005F680E /* LaunchScreen.storyboard in Resources */,
 				B7E3A1B51CCC6449005F680E /* Assets.xcassets in Resources */,
 				B7E3A1E21CCC67A4005F680E /* PasswordLogin.storyboard in Resources */,
@@ -349,6 +348,7 @@
 				B7E3A1AE1CCC6449005F680E /* AppDelegate.swift in Sources */,
 				B7E3A1E11CCC67A4005F680E /* PasswordLoginViewController.swift in Sources */,
 				B7BAFB411D3B521F009E70FA /* MyPasswordUIValidation.swift in Sources */,
+				B7E18F281D4A0F3F00A740D4 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
