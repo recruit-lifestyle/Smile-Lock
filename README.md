@@ -62,9 +62,7 @@ self.passwordContainerView.highlightedColor = UIColor.color(.Blue)
 ```
 
 #### 5. Visual Effect.
-If you want to see visual effect verison (blur view and vibrancy view), choose `BlurPasswordLogin.storyboard` as main storyboard.
-
-<img src="SmileLock-Example/demo_gif/blur_version.png"">
+If you want to see no visual effect verison, change the property `let isBlurUI = false` in `HomeViewController.swift`.
 
 
 #How to use it for your project?
