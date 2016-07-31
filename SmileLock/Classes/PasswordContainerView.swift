@@ -10,7 +10,7 @@ import LocalAuthentication
 
 public protocol PasswordInputCompleteProtocol: class {
     func passwordInputComplete(passwordContainerView: PasswordContainerView, input: String)
-    func touchAuthenticationComplete(passwordContainerView: PasswordContainerView, success: Bool)
+    func touchAuthenticationComplete(passwordContainerView: PasswordContainerView, success: Bool, error: NSError?)
 }
 
 public class PasswordContainerView: UIView {
@@ -23,7 +23,7 @@ public class PasswordContainerView: UIView {
     
     //MARK: Property
     public weak var delegate: PasswordInputCompleteProtocol?
-    private let touchIDContext = LAContext()
+    private var touchIDContext = LAContext()
     
     private var inputString: String = "" {
         didSet {
@@ -155,15 +155,16 @@ public class PasswordContainerView: UIView {
     }
     
     @IBAction func touchAuthenticationAction(sender: UIButton) {
-        if isTouchAuthenticationAvailable {
-            touchIDContext.evaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, localizedReason: touchAuthenticationReason) { (success, error) in
-                dispatch_async(dispatch_get_main_queue(), {
-                    if success {
-                        self.passwordDotView.inputDotCount = self.passwordDotView.totalDotCount
-                    }
-                    self.delegate?.touchAuthenticationComplete(self, success: success)
-                })
-            }
+        guard isTouchAuthenticationAvailable else { return }
+        touchIDContext.evaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, localizedReason: touchAuthenticationReason) { (success, error) in
+            dispatch_async(dispatch_get_main_queue(), {
+                if success {
+                    self.passwordDotView.inputDotCount = self.passwordDotView.totalDotCount
+                    // instantiate LAContext again for avoiding the situation that PasswordContainerView stay in memory when authenticate successfully
+                    self.touchIDContext = LAContext()
+                }
+                self.delegate?.touchAuthenticationComplete(self, success: success, error: error)
+            })
         }
     }
 }

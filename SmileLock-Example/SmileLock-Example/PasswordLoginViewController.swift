@@ -39,11 +39,11 @@ extension PasswordLoginViewController: PasswordInputCompleteProtocol {
         }
     }
     
-    func touchAuthenticationComplete(passwordContainerView: PasswordContainerView, success: Bool) {
+    func touchAuthenticationComplete(passwordContainerView: PasswordContainerView, success: Bool, error: NSError?) {
         if success {
             self.validationSuccess()
         } else {
-            self.validationFail()
+            passwordContainerView.clearInput()
         }
     }
 }

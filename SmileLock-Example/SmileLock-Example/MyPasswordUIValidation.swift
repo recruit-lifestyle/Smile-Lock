@@ -24,12 +24,12 @@ class MyPasswordUIValidation: PasswordUIValidation<MyPasswordModel> {
         }
     }
     //handle Touch ID
-    override func touchAuthenticationComplete(passwordContainerView: PasswordContainerView, success: Bool) {
+    override func touchAuthenticationComplete(passwordContainerView: PasswordContainerView, success: Bool, error: NSError?) {
         if success {
             let dummyModel = MyPasswordModel()
             self.success?(dummyModel)
         } else {
-            self.failure?()
+            passwordContainerView.clearInput()
         }
     }
 }
