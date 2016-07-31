@@ -131,9 +131,9 @@
 			children = (
 				B7E3A1AD1CCC6449005F680E /* AppDelegate.swift */,
 				B7E3A1E31CCC68A3005F680E /* extension.swift */,
+				B7E18F271D4A0F3F00A740D4 /* HomeViewController.swift */,
 				B7BAFB401D3B521F009E70FA /* MyPasswordUIValidation.swift */,
 				B7E3A1DF1CCC67A4005F680E /* PasswordLoginViewController.swift */,
-				B7E18F271D4A0F3F00A740D4 /* HomeViewController.swift */,
 				B7A42F861CD2588B00FEB7B0 /* BlurPasswordLoginViewController.swift */,
 				B7E3A1E01CCC67A4005F680E /* PasswordLogin.storyboard */,
 				B7E3A1B41CCC6449005F680E /* Assets.xcassets */,
