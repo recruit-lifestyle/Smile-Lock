@@ -12,6 +12,12 @@ A library for make a beautiful Passcode Lock View, also support Touch ID.
 <img src="SmileLock-Example/demo_gif/demo.gif" width="400">
 <img src="SmileLock-Example/demo_gif/demo_blur.gif" width="400">
 
+
+# Requirements
+
+- iOS 9.0+
+- Swift 3 (pod verison 2.x), Swift 2.3 (pod verison 1.x)
+
 #What can it do for you?
 
 
