@@ -8,53 +8,53 @@
 import UIKit
 
 @IBDesignable
-public class PasswordDotView: UIView {
+open class PasswordDotView: UIView {
     
     //MARK: Property
     @IBInspectable
-    public var inputDotCount: Int = 0 {
+    open var inputDotCount: Int = 0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    public var totalDotCount: Int = 6 {
+    open var totalDotCount: Int = 6 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    public var strokeColor: UIColor = UIColor.darkGrayColor() {
+    open var strokeColor: UIColor = UIColor.darkGray {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    public var fillColor: UIColor = UIColor.redColor() {
+    open var fillColor: UIColor = UIColor.red {
         didSet {
             setNeedsDisplay()
         }
     }
 
-    private var radius: CGFloat = 6
-    private let spacingRatio: CGFloat = 2
-    private let borderWidthRatio: CGFloat = 1 / 5
+    fileprivate var radius: CGFloat = 6
+    fileprivate let spacingRatio: CGFloat = 2
+    fileprivate let borderWidthRatio: CGFloat = 1 / 5
     
-    private(set) public var isFull = false
+    fileprivate(set) open var isFull = false
     
     //MARK: Draw
-    public override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    open override func draw(_ rect: CGRect) {
+        super.draw(rect)
         isFull = (inputDotCount == totalDotCount)
         strokeColor.setStroke()
         fillColor.setFill()
         let isOdd = (totalDotCount % 2) != 0
         let positions = getDotPositions(isOdd)
         let borderWidth = radius * borderWidthRatio
-        for (index, position) in positions.enumerate() {
+        for (index, position) in positions.enumerated() {
             if index < inputDotCount {
                 let pathToFill = UIBezierPath.circlePathWithCenter(position, radius: (radius + borderWidth / 2), lineWidth: borderWidth)
                 pathToFill.fill()
@@ -66,23 +66,23 @@ public class PasswordDotView: UIView {
     }
     
     //MARK: LifeCycle
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.clear
     }
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         updateRadius()
         setNeedsDisplay()
     }
     
     //MARK: Animation
-    private var shakeCount = 0
-    private var direction = false
-    public func shakeAnimationWithCompletion(completion: () -> ()) {
+    fileprivate var shakeCount = 0
+    fileprivate var direction = false
+    open func shakeAnimationWithCompletion(_ completion: @escaping () -> ()) {
         let maxShakeCount = 5
-        let centerX = CGRectGetMidX(bounds)
-        let centerY = CGRectGetMidY(bounds)
+        let centerX = bounds.midX
+        let centerY = bounds.midY
         var duration = 0.10
         var moveX: CGFloat = 5
         
@@ -100,7 +100,7 @@ public class PasswordDotView: UIView {
             }, withCompletion: {
                 if self.shakeCount >= maxShakeCount {
                     self.shakeAnimation(duration, animation: {
-                        let realCenterX = CGRectGetMidX(self.superview!.bounds)
+                        let realCenterX = self.superview!.bounds.midX
                         self.center = CGPoint(x: realCenterX, y: centerY)
                         }, withCompletion: {
                             self.direction = false
@@ -118,8 +118,8 @@ public class PasswordDotView: UIView {
 
 private extension PasswordDotView {
     //MARK: Animation
-    func shakeAnimation(duration: NSTimeInterval, animation: () -> (), withCompletion completion: () -> ()) {
-        UIView.animateWithDuration(duration, delay: 0, usingSpringWithDamping: 0.01, initialSpringVelocity: 0.35, options: [.CurveEaseInOut], animations: {
+    func shakeAnimation(_ duration: TimeInterval, animation: @escaping () -> (), withCompletion completion: @escaping () -> ()) {
+        UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.01, initialSpringVelocity: 0.35, options: UIViewAnimationOptions(), animations: {
             animation()
         }) { _ in
             completion()
@@ -128,8 +128,8 @@ private extension PasswordDotView {
     
     //MARK: Update Radius
     func updateRadius() {
-        let width = CGRectGetWidth(bounds)
-        let height = CGRectGetHeight(bounds)
+        let width = bounds.width
+        let height = bounds.height
         radius = height / 2 - height / 2 * borderWidthRatio
         let spacing = radius * spacingRatio
         let count = CGFloat(totalDotCount)
@@ -143,9 +143,9 @@ private extension PasswordDotView {
     }
 
     //MARK: Dots Layout
-    func getDotPositions(isOdd: Bool) -> [CGPoint] {
-        let centerX = CGRectGetMidX(bounds)
-        let centerY = CGRectGetMidY(bounds)
+    func getDotPositions(_ isOdd: Bool) -> [CGPoint] {
+        let centerX = bounds.midX
+        let centerY = bounds.midY
         let spacing = radius * spacingRatio
         let middleIndex = isOdd ? (totalDotCount + 1) / 2 : (totalDotCount) / 2
         let offSet = isOdd ? 0 : -(radius + spacing / 2)
@@ -159,7 +159,7 @@ private extension PasswordDotView {
 }
 
 extension UIBezierPath {
-    class func circlePathWithCenter(center: CGPoint, radius: CGFloat, lineWidth: CGFloat) -> UIBezierPath {
+    class func circlePathWithCenter(_ center: CGPoint, radius: CGFloat, lineWidth: CGFloat) -> UIBezierPath {
         let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2.0 * CGFloat(M_PI), clockwise: false)
         path.lineWidth = lineWidth
         return path
