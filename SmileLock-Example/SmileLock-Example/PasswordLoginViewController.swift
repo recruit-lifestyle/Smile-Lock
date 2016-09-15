@@ -31,7 +31,7 @@ class PasswordLoginViewController: UIViewController {
 }
 
 extension PasswordLoginViewController: PasswordInputCompleteProtocol {
-    func passwordInputComplete(passwordContainerView: PasswordContainerView, input: String) {
+    func passwordInputComplete(_ passwordContainerView: PasswordContainerView, input: String) {
         if self.validation(input) {
             self.validationSuccess()
         } else {
@@ -39,7 +39,7 @@ extension PasswordLoginViewController: PasswordInputCompleteProtocol {
         }
     }
     
-    func touchAuthenticationComplete(passwordContainerView: PasswordContainerView, success: Bool, error: NSError?) {
+    func touchAuthenticationComplete(_ passwordContainerView: PasswordContainerView, success: Bool, error: NSError?) {
         if success {
             self.validationSuccess()
         } else {
@@ -49,13 +49,13 @@ extension PasswordLoginViewController: PasswordInputCompleteProtocol {
 }
 
 private extension PasswordLoginViewController {
-    func validation(input: String) -> Bool {
+    func validation(_ input: String) -> Bool {
         return input == "123456"
     }
     
     func validationSuccess() {
         print("*️⃣ success!")
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     func validationFail() {

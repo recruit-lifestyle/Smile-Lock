@@ -23,7 +23,7 @@ class BlurPasswordLoginViewController: UIViewController {
         
         self.passwordUIValidation.success = { [weak self] _ in
             print("*️⃣ success!")
-            self?.dismissViewControllerAnimated(true, completion: nil)
+            self?.dismiss(animated: true, completion: nil)
         }
         
         self.passwordUIValidation.failure = { _ in

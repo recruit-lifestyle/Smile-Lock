@@ -8,57 +8,57 @@
 import UIKit
 
 public protocol PasswordInputViewTappedProtocol: class {
-    func passwordInputView(passwordInputView: PasswordInputView, tappedString: String)
+    func passwordInputView(_ passwordInputView: PasswordInputView, tappedString: String)
 }
 
 @IBDesignable
-public class PasswordInputView: UIView {
+open class PasswordInputView: UIView {
     
     //MARK: Property
-    public weak var delegate: PasswordInputViewTappedProtocol?
+    open weak var delegate: PasswordInputViewTappedProtocol?
     
     let circleView = UIView()
     let button = UIButton()
-    public let label = UILabel()
-    private let fontSizeRatio: CGFloat = 46 / 40
-    private let borderWidthRatio: CGFloat = 1 / 26
-    private var touchUpFlag = false
-    private(set) public var isAnimating = false
+    open let label = UILabel()
+    fileprivate let fontSizeRatio: CGFloat = 46 / 40
+    fileprivate let borderWidthRatio: CGFloat = 1 / 26
+    fileprivate var touchUpFlag = false
+    fileprivate(set) open var isAnimating = false
     var isVibrancyEffect = false
     
     @IBInspectable
-    public var numberString: String = "2" {
+    open var numberString: String = "2" {
         didSet {
             label.text = numberString
         }
     }
     
     @IBInspectable
-    public var borderColor: UIColor = UIColor.darkGrayColor() {
+    open var borderColor: UIColor = UIColor.darkGray {
         didSet {
             backgroundColor = borderColor
         }
     }
     
     @IBInspectable
-    public var circleBackgroundColor: UIColor = UIColor.whiteColor() {
+    open var circleBackgroundColor: UIColor = UIColor.white {
         didSet {
             circleView.backgroundColor = circleBackgroundColor
         }
     }
     
     @IBInspectable
-    public var textColor: UIColor = UIColor.darkGrayColor() {
+    open var textColor: UIColor = UIColor.darkGray {
         didSet {
             label.textColor = textColor
         }
     }
     
     @IBInspectable
-    public var highlightBackgroundColor: UIColor = UIColor.redColor()
+    open var highlightBackgroundColor: UIColor = UIColor.red
     
     @IBInspectable
-    public var highlightTextColor: UIColor = UIColor.whiteColor()
+    open var highlightTextColor: UIColor = UIColor.white
     
     //MARK: Init
     public override init(frame: CGRect) {
@@ -75,7 +75,7 @@ public class PasswordInputView: UIView {
         configureSubviews()
     }
     #else
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         configureSubviews()
     }
@@ -100,15 +100,15 @@ public class PasswordInputView: UIView {
         }
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         updateUI()
     }
     
-    private func updateUI() {
+    fileprivate func updateUI() {
         //prepare calculate
-        let width = CGRectGetWidth(bounds)
-        let height = CGRectGetHeight(bounds)
+        let width = bounds.width
+        let height = bounds.height
         let center = CGPoint(x: width/2, y: height/2)
         let radius = min(width, height) / 2
         let borderWidth = radius * borderWidthRatio
@@ -116,7 +116,7 @@ public class PasswordInputView: UIView {
         
         //update label
         label.text = numberString
-        label.font = UIFont.systemFontOfSize( radius * fontSizeRatio, weight: UIFontWeightThin)
+        label.font = UIFont.systemFont( ofSize: radius * fontSizeRatio, weight: UIFontWeightThin)
         label.textColor = textColor
         
         //update circle view
@@ -130,7 +130,7 @@ public class PasswordInputView: UIView {
         //update mask
         let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2.0 * CGFloat(M_PI), clockwise: false)
         let maskLayer = CAShapeLayer()
-        maskLayer.path = path.CGPath
+        maskLayer.path = path.cgPath
         layer.mask = maskLayer
         
         //update color
@@ -145,19 +145,19 @@ private extension PasswordInputView {
 
         //configure label
         NSLayoutConstraint.addEqualConstraintsFromSubView(label, toSuperView: self)
-        label.textAlignment = .Center
+        label.textAlignment = .center
         
         //configure button
         NSLayoutConstraint.addEqualConstraintsFromSubView(button, toSuperView: self)
-        button.exclusiveTouch = true
-        button.addTarget(self, action: #selector(PasswordInputView.touchDown), forControlEvents: [.TouchDown])
-        button.addTarget(self, action: #selector(PasswordInputView.touchUp), forControlEvents: [.TouchUpInside, .TouchDragOutside, .TouchCancel, .TouchDragExit])
+        button.isExclusiveTouch = true
+        button.addTarget(self, action: #selector(PasswordInputView.touchDown), for: [.touchDown])
+        button.addTarget(self, action: #selector(PasswordInputView.touchUp), for: [.touchUpInside, .touchDragOutside, .touchCancel, .touchDragExit])
     }
     
     //MARK: Animation
     func touchDownAction() {
         let originFont = label.font
-        label.font = UIFont.systemFontOfSize(originFont.pointSize, weight: UIFontWeightLight)
+        label.font = UIFont.systemFont(ofSize: (originFont?.pointSize)!, weight: UIFontWeightLight)
         label.textColor = highlightTextColor
         if !self.isVibrancyEffect {
             backgroundColor = highlightBackgroundColor
@@ -167,7 +167,7 @@ private extension PasswordInputView {
     
     func touchUpAction() {
         let originFont = label.font
-        label.font = UIFont.systemFontOfSize(originFont.pointSize, weight: UIFontWeightThin)
+        label.font = UIFont.systemFont(ofSize: (originFont?.pointSize)!, weight: UIFontWeightThin)
         label.textColor = textColor
         backgroundColor = borderColor
         circleView.backgroundColor = circleBackgroundColor
@@ -195,30 +195,30 @@ private extension PasswordInputView {
         })
     }
     
-    func tappedAnimation(animation: () -> (), withCompletion completion: (() -> ())?) {
-        UIView.animateWithDuration(0.25, delay: 0, options: [.AllowUserInteraction, .BeginFromCurrentState], animations: animation) { _ in
+    func tappedAnimation(_ animation: @escaping () -> (), withCompletion completion: (() -> ())?) {
+        UIView.animate(withDuration: 0.25, delay: 0, options: [.allowUserInteraction, .beginFromCurrentState], animations: animation) { _ in
             completion?()
         }
     }
 }
 
 internal extension NSLayoutConstraint {
-    class func addConstraintsFromView(view: UIView, toView baseView: UIView, constraintInsets insets: UIEdgeInsets) {
-        baseView.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: -insets.top)
-        let topConstraint = baseView.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: -insets.top)
-        let bottomConstraint = baseView.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor, constant: insets.bottom)
-        let leftConstraint = baseView.leftAnchor.constraintEqualToAnchor(view.leftAnchor, constant: -insets.left)
-        let rightConstraint = baseView.rightAnchor.constraintEqualToAnchor(view.rightAnchor, constant: insets.right)
-        NSLayoutConstraint.activateConstraints([topConstraint, bottomConstraint, leftConstraint, rightConstraint])
+    class func addConstraintsFromView(_ view: UIView, toView baseView: UIView, constraintInsets insets: UIEdgeInsets) {
+        baseView.topAnchor.constraint(equalTo: view.topAnchor, constant: -insets.top)
+        let topConstraint = baseView.topAnchor.constraint(equalTo: view.topAnchor, constant: -insets.top)
+        let bottomConstraint = baseView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: insets.bottom)
+        let leftConstraint = baseView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -insets.left)
+        let rightConstraint = baseView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: insets.right)
+        NSLayoutConstraint.activate([topConstraint, bottomConstraint, leftConstraint, rightConstraint])
     }
     
-    class func addEqualConstraintsFromSubView(subView: UIView, toSuperView superView: UIView) {
+    class func addEqualConstraintsFromSubView(_ subView: UIView, toSuperView superView: UIView) {
         superView.addSubview(subView)
         subView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.addConstraintsFromView(subView, toView: superView, constraintInsets: UIEdgeInsetsZero)
+        NSLayoutConstraint.addConstraintsFromView(subView, toView: superView, constraintInsets: UIEdgeInsets.zero)
     }
     
-    class func addConstraintsFromSubView(subView: UIView, toSuperView superView: UIView, constraintInsets insets: UIEdgeInsets) {
+    class func addConstraintsFromSubView(_ subView: UIView, toSuperView superView: UIView, constraintInsets insets: UIEdgeInsets) {
         superView.addSubview(subView)
         subView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.addConstraintsFromView(subView, toView: superView, constraintInsets: insets)

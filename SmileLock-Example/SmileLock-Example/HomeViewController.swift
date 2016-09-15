@@ -20,14 +20,14 @@ class HomeViewController: UIViewController {
         self.loginVCID = isBlurUI ? "BlurPasswordLoginViewController" : "PasswordLoginViewController"
     }
     
-    @IBAction func presentLoginVC(sender: AnyObject) {
+    @IBAction func presentLoginVC(_ sender: AnyObject) {
         self.present(self.loginVCID)
     }
     
-    func present(id: String) {
-        let loginVC = self.storyboard?.instantiateViewControllerWithIdentifier(id)
-        loginVC?.modalTransitionStyle = .CrossDissolve
-        loginVC?.modalPresentationStyle = .OverCurrentContext
-        self.presentViewController(loginVC!, animated: true, completion: nil)
+    func present(_ id: String) {
+        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: id)
+        loginVC?.modalTransitionStyle = .crossDissolve
+        loginVC?.modalPresentationStyle = .overCurrentContext
+        self.present(loginVC!, animated: true, completion: nil)
     }
 }
