@@ -19,12 +19,13 @@ class MyPasswordModel {
 class MyPasswordUIValidation: PasswordUIValidation<MyPasswordModel> {
     init(in stackView: UIStackView) {
         super.init(in: stackView, digit: 6)
-        self.validation = { password in
+        validation = { password in
             MyPasswordModel.match(password)
         }
     }
+    
     //handle Touch ID
-    override func touchAuthenticationComplete(_ passwordContainerView: PasswordContainerView, success: Bool, error: NSError?) {
+    override func touchAuthenticationComplete(_ passwordContainerView: PasswordContainerView, success: Bool, error: Error?) {
         if success {
             let dummyModel = MyPasswordModel()
             self.success?(dummyModel)

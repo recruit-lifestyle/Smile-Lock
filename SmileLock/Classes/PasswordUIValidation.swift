@@ -38,5 +38,5 @@ open class PasswordUIValidation<T>: PasswordInputCompleteProtocol {
         success?(model)
     }
     
-    open func touchAuthenticationComplete(_ passwordContainerView: PasswordContainerView, success: Bool, error: NSError?) {}
+    open func touchAuthenticationComplete(_ passwordContainerView: PasswordContainerView, success: Bool, error: Error?) {}
 }

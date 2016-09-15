@@ -16,7 +16,7 @@ A library for make a beautiful Passcode Lock View, also support Touch ID.
 # Requirements
 
 - iOS 9.0+
-- Swift 3 (pod verison 2.x), Swift 2.3 (pod verison 1.x)
+- Swift 3 (pod version 2.x), Swift 2.3 (pod version 1.x)
 
 #What can it do for you?
 
@@ -25,7 +25,7 @@ A library for make a beautiful Passcode Lock View, also support Touch ID.
 
 ``` swift
 let kPasswordDigit = 6
-self.passwordContainerView = PasswordContainerView.createWithDigit(kPasswordDigit)
+passwordContainerView = PasswordContainerView.createWithDigit(kPasswordDigit)
 ```
 
 #### 2. Passcode input completed delegate callback.
@@ -63,12 +63,12 @@ extension ViewController: PasswordInputCompleteProtocol {
 #### 4. Customize UI.
 
 ``` swift
-self.passwordContainerView.tintColor = UIColor.color(.TextColor)
-self.passwordContainerView.highlightedColor = UIColor.color(.Blue)
+passwordContainerView.tintColor = UIColor.color(.textColor)
+passwordContainerView.highlightedColor = UIColor.color(.blue)
 ```
 
 #### 5. Visual Effect.
-If you want to see no visual effect verison, change the property `let isBlurUI = false` in `HomeViewController.swift`.
+If you want to see no visual effect, change the property `isBlurUI` to `false` in `HomeViewController.swift`.
 
 
 #How to use it for your project?
@@ -88,22 +88,22 @@ You can subclass `PasswordUIValidation` for a more simple & elegant code. More d
 ```swift
 override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //create PasswordUIValidation subclass
-        self.passwordUIValidation = MyPasswordUIValidation(in: passwordStackView)
-        
-        self.passwordUIValidation.success = { [weak self] _ in
+        passwordUIValidation = MyPasswordUIValidation(in: passwordStackView)
+
+        passwordUIValidation.success = { [weak self] _ in
             print("*️⃣ success!")
             self?.alertForRightPassword { _ in
                 self?.passwordUIValidation.resetUI()
             }
         }
-        
-        self.passwordUIValidation.failure = { _ in
+
+        passwordUIValidation.failure = { _ in
             //do not forget add [weak self] if the view controller become nil at some point during its lifetime
             print("*️⃣ failure!")
         }
-        
+
         ...
     }
 ```

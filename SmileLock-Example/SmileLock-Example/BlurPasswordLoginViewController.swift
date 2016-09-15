@@ -19,19 +19,19 @@ class BlurPasswordLoginViewController: UIViewController {
         super.viewDidLoad()
         
         //create PasswordUIValidation subclass
-        self.passwordUIValidation = MyPasswordUIValidation(in: passwordStackView)
+        passwordUIValidation = MyPasswordUIValidation(in: passwordStackView)
         
-        self.passwordUIValidation.success = { [weak self] _ in
+        passwordUIValidation.success = { [weak self] _ in
             print("*️⃣ success!")
             self?.dismiss(animated: true, completion: nil)
         }
         
-        self.passwordUIValidation.failure = { _ in
+        passwordUIValidation.failure = { _ in
             //do not forget add [weak self] if the view controller become nil at some point during its lifetime
             print("*️⃣ failure!")
         }
         
         //visual effect password UI
-        self.passwordUIValidation.view.rearrangeForVisualEffectView(in: self)
+        passwordUIValidation.view.rearrangeForVisualEffectView(in: self)
     }
 }
