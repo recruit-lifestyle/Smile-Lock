@@ -21,25 +21,25 @@ class PasswordLoginViewController: UIViewController {
         super.viewDidLoad()
         
         //create PasswordContainerView
-        self.passwordContainerView = PasswordContainerView.create(in: passwordStackView, digit: kPasswordDigit)
+        passwordContainerView = PasswordContainerView.create(in: passwordStackView, digit: kPasswordDigit)
         passwordContainerView.delegate = self
         
         //customize password UI
-        self.passwordContainerView.tintColor = UIColor.color(.TextColor)
-        self.passwordContainerView.highlightedColor = UIColor.color(.Blue)
+        passwordContainerView.tintColor = UIColor.color(.textColor)
+        passwordContainerView.highlightedColor = UIColor.color(.blue)
     }
 }
 
 extension PasswordLoginViewController: PasswordInputCompleteProtocol {
     func passwordInputComplete(_ passwordContainerView: PasswordContainerView, input: String) {
-        if self.validation(input) {
-            self.validationSuccess()
+        if validation(input) {
+            validationSuccess()
         } else {
-            self.validationFail()
+            validationFail()
         }
     }
     
-    func touchAuthenticationComplete(_ passwordContainerView: PasswordContainerView, success: Bool, error: NSError?) {
+    func touchAuthenticationComplete(_ passwordContainerView: PasswordContainerView, success: Bool, error: Error?) {
         if success {
             self.validationSuccess()
         } else {
@@ -55,11 +55,11 @@ private extension PasswordLoginViewController {
     
     func validationSuccess() {
         print("*️⃣ success!")
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     func validationFail() {
         print("*️⃣ failure!")
-        self.passwordContainerView.wrongPassword()
+        passwordContainerView.wrongPassword()
     }
 }

@@ -12,28 +12,28 @@ open class PasswordDotView: UIView {
     
     //MARK: Property
     @IBInspectable
-    open var inputDotCount: Int = 0 {
+    open var inputDotCount = 0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    open var totalDotCount: Int = 6 {
+    open var totalDotCount = 6 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    open var strokeColor: UIColor = UIColor.darkGray {
+    open var strokeColor = UIColor.darkGray {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    open var fillColor: UIColor = UIColor.red {
+    open var fillColor = UIColor.red {
         didSet {
             setNeedsDisplay()
         }
@@ -56,10 +56,10 @@ open class PasswordDotView: UIView {
         let borderWidth = radius * borderWidthRatio
         for (index, position) in positions.enumerated() {
             if index < inputDotCount {
-                let pathToFill = UIBezierPath.circlePathWithCenter(position, radius: (radius + borderWidth / 2), lineWidth: borderWidth)
+                let pathToFill = UIBezierPath(circleWithCenter: position, radius: (radius + borderWidth / 2), lineWidth: borderWidth)
                 pathToFill.fill()
             } else {
-                let pathToStroke = UIBezierPath.circlePathWithCenter(position, radius: radius, lineWidth: borderWidth)
+                let pathToStroke = UIBezierPath(circleWithCenter: position, radius: radius, lineWidth: borderWidth)
                 pathToStroke.stroke()
             }
         }
@@ -91,36 +91,36 @@ open class PasswordDotView: UIView {
         } else {
             moveX *= 2
         }
-        shakeAnimation(duration, animation: {
+        shakeAnimation(withDuration: duration, animations: {
             if !self.direction {
                 self.center = CGPoint(x: centerX + moveX, y: centerY)
             } else {
                 self.center = CGPoint(x: centerX - moveX, y: centerY)
             }
-            }, withCompletion: {
-                if self.shakeCount >= maxShakeCount {
-                    self.shakeAnimation(duration, animation: {
-                        let realCenterX = self.superview!.bounds.midX
-                        self.center = CGPoint(x: realCenterX, y: centerY)
-                        }, withCompletion: {
-                            self.direction = false
-                            self.shakeCount = 0
-                            completion()
-                    })
-                } else {
-                    self.shakeCount += 1
-                    self.direction = !self.direction
-                    self.shakeAnimationWithCompletion(completion)
+        }) {
+            if self.shakeCount >= maxShakeCount {
+                self.shakeAnimation(withDuration: duration, animations: {
+                    let realCenterX = self.superview!.bounds.midX
+                    self.center = CGPoint(x: realCenterX, y: centerY)
+                }) {
+                    self.direction = false
+                    self.shakeCount = 0
+                    completion()
                 }
-        })
+            } else {
+                self.shakeCount += 1
+                self.direction = !self.direction
+                self.shakeAnimationWithCompletion(completion)
+            }
+        }
     }
 }
 
 private extension PasswordDotView {
     //MARK: Animation
-    func shakeAnimation(_ duration: TimeInterval, animation: @escaping () -> (), withCompletion completion: @escaping () -> ()) {
+    func shakeAnimation(withDuration duration: TimeInterval, animations: @escaping () -> (), completion: @escaping () -> ()) {
         UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.01, initialSpringVelocity: 0.35, options: UIViewAnimationOptions(), animations: {
-            animation()
+            animations()
         }) { _ in
             completion()
         }
@@ -158,10 +158,9 @@ private extension PasswordDotView {
     }
 }
 
-extension UIBezierPath {
-    class func circlePathWithCenter(_ center: CGPoint, radius: CGFloat, lineWidth: CGFloat) -> UIBezierPath {
-        let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2.0 * CGFloat(M_PI), clockwise: false)
-        path.lineWidth = lineWidth
-        return path
+internal extension UIBezierPath {
+    convenience init(circleWithCenter center: CGPoint, radius: CGFloat, lineWidth: CGFloat) {
+        self.init(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2.0 * CGFloat(M_PI), clockwise: false)
+        self.lineWidth = lineWidth
     }
 }

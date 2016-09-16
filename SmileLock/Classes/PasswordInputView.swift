@@ -27,47 +27,38 @@ open class PasswordInputView: UIView {
     var isVibrancyEffect = false
     
     @IBInspectable
-    open var numberString: String = "2" {
+    open var numberString = "2" {
         didSet {
             label.text = numberString
         }
     }
     
     @IBInspectable
-    open var borderColor: UIColor = UIColor.darkGray {
+    open var borderColor = UIColor.darkGray {
         didSet {
             backgroundColor = borderColor
         }
     }
     
     @IBInspectable
-    open var circleBackgroundColor: UIColor = UIColor.white {
+    open var circleBackgroundColor = UIColor.white {
         didSet {
             circleView.backgroundColor = circleBackgroundColor
         }
     }
     
     @IBInspectable
-    open var textColor: UIColor = UIColor.darkGray {
+    open var textColor = UIColor.darkGray {
         didSet {
             label.textColor = textColor
         }
     }
     
     @IBInspectable
-    open var highlightBackgroundColor: UIColor = UIColor.red
+    open var highlightBackgroundColor = UIColor.red
     
     @IBInspectable
-    open var highlightTextColor: UIColor = UIColor.white
-    
-    //MARK: Init
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
+    open var highlightTextColor = UIColor.white
     
     //MARK: Life Cycle
     #if TARGET_INTERFACE_BUILDER
@@ -116,7 +107,7 @@ open class PasswordInputView: UIView {
         
         //update label
         label.text = numberString
-        label.font = UIFont.systemFont( ofSize: radius * fontSizeRatio, weight: UIFontWeightThin)
+        label.font = UIFont.systemFont(ofSize: radius * fontSizeRatio, weight: UIFontWeightThin)
         label.textColor = textColor
         
         //update circle view
@@ -157,7 +148,7 @@ private extension PasswordInputView {
     //MARK: Animation
     func touchDownAction() {
         let originFont = label.font
-        label.font = UIFont.systemFont(ofSize: (originFont?.pointSize)!, weight: UIFontWeightLight)
+        label.font = UIFont.systemFont(ofSize: originFont!.pointSize, weight: UIFontWeightLight)
         label.textColor = highlightTextColor
         if !self.isVibrancyEffect {
             backgroundColor = highlightBackgroundColor
@@ -167,7 +158,7 @@ private extension PasswordInputView {
     
     func touchUpAction() {
         let originFont = label.font
-        label.font = UIFont.systemFont(ofSize: (originFont?.pointSize)!, weight: UIFontWeightThin)
+        label.font = UIFont.systemFont(ofSize: originFont!.pointSize, weight: UIFontWeightThin)
         label.textColor = textColor
         backgroundColor = borderColor
         circleView.backgroundColor = circleBackgroundColor
@@ -175,35 +166,35 @@ private extension PasswordInputView {
     
     func touchDownAnimation() {
         isAnimating = true
-        tappedAnimation ({
+        tappedAnimation(animations: { 
             self.touchDownAction()
-            }, withCompletion: {
-                if self.touchUpFlag {
-                    self.touchUpAnimation()
-                } else {
-                    self.isAnimating = false
-                }
-        })
+        }) {
+            if self.touchUpFlag {
+                self.touchUpAnimation()
+            } else {
+                self.isAnimating = false
+            }
+        }
     }
     
     func touchUpAnimation() {
         isAnimating = true
-        tappedAnimation ({
+        tappedAnimation(animations: { 
             self.touchUpAction()
-            }, withCompletion: {
-                self.isAnimating = false
-        })
+        }) {
+            self.isAnimating = false
+        }
     }
     
-    func tappedAnimation(_ animation: @escaping () -> (), withCompletion completion: (() -> ())?) {
-        UIView.animate(withDuration: 0.25, delay: 0, options: [.allowUserInteraction, .beginFromCurrentState], animations: animation) { _ in
+    func tappedAnimation(animations: @escaping () -> (), completion: (() -> ())?) {
+        UIView.animate(withDuration: 0.25, delay: 0, options: [.allowUserInteraction, .beginFromCurrentState], animations: animations) { _ in
             completion?()
         }
     }
 }
 
 internal extension NSLayoutConstraint {
-    class func addConstraintsFromView(_ view: UIView, toView baseView: UIView, constraintInsets insets: UIEdgeInsets) {
+    class func addConstraints(fromView view: UIView, toView baseView: UIView, constraintInsets insets: UIEdgeInsets) {
         baseView.topAnchor.constraint(equalTo: view.topAnchor, constant: -insets.top)
         let topConstraint = baseView.topAnchor.constraint(equalTo: view.topAnchor, constant: -insets.top)
         let bottomConstraint = baseView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: insets.bottom)
@@ -215,12 +206,12 @@ internal extension NSLayoutConstraint {
     class func addEqualConstraintsFromSubView(_ subView: UIView, toSuperView superView: UIView) {
         superView.addSubview(subView)
         subView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.addConstraintsFromView(subView, toView: superView, constraintInsets: UIEdgeInsets.zero)
+        NSLayoutConstraint.addConstraints(fromView: subView, toView: superView, constraintInsets: UIEdgeInsets.zero)
     }
     
-    class func addConstraintsFromSubView(_ subView: UIView, toSuperView superView: UIView, constraintInsets insets: UIEdgeInsets) {
-        superView.addSubview(subView)
-        subView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.addConstraintsFromView(subView, toView: superView, constraintInsets: insets)
+    class func addConstraints(fromSubview subview: UIView, toSuperView superView: UIView, constraintInsets insets: UIEdgeInsets) {
+        superView.addSubview(subview)
+        subview.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.addConstraints(fromView: subview, toView: superView, constraintInsets: insets)
     }
 }
