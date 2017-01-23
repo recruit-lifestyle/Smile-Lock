@@ -1,15 +1,15 @@
 //
-//  SmileLock_ExampleTests.swift
-//  SmileLock-ExampleTests
+//  SmileLockTests.swift
+//  SmileLockTests
 //
 //  Created by rain on 2017/01/23.
 //  Copyright © 2017年 RECRUIT LIFESTYLE CO., LTD. All rights reserved.
 //
 
 import XCTest
-@testable import SmileLock_Example
+@testable import SmileLock
 
-class SmileLock_ExampleTests: XCTestCase {
+class SmileLockTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

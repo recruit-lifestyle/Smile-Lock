@@ -2,8 +2,8 @@
 //  SmileLock_ExampleUITests.swift
 //  SmileLock-ExampleUITests
 //
-//  Created by yuchen liu on 4/24/16.
-//  Copyright © 2016 Recruit Lifestyle Co., Ltd. All rights reserved.
+//  Created by rain on 2017/01/23.
+//  Copyright © 2017年 RECRUIT LIFESTYLE CO., LTD. All rights reserved.
 //
 
 import XCTest

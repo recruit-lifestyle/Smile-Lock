@@ -7,77 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95284A1808A8C082E917AD51 /* Pods_SmileLock_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA1702F1AC31AA3EDCA5FE7 /* Pods_SmileLock_Example.framework */; };
-		B7A42F881CD2588B00FEB7B0 /* BlurPasswordLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A42F861CD2588B00FEB7B0 /* BlurPasswordLoginViewController.swift */; };
-		B7BAFB411D3B521F009E70FA /* MyPasswordUIValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BAFB401D3B521F009E70FA /* MyPasswordUIValidation.swift */; };
-		B7E18F281D4A0F3F00A740D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E18F271D4A0F3F00A740D4 /* HomeViewController.swift */; };
-		B7E3A1AE1CCC6449005F680E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E3A1AD1CCC6449005F680E /* AppDelegate.swift */; };
-		B7E3A1B51CCC6449005F680E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E3A1B41CCC6449005F680E /* Assets.xcassets */; };
-		B7E3A1B81CCC6449005F680E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E3A1B61CCC6449005F680E /* LaunchScreen.storyboard */; };
-		B7E3A1C31CCC6449005F680E /* SmileLock_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E3A1C21CCC6449005F680E /* SmileLock_ExampleTests.swift */; };
-		B7E3A1CE1CCC6449005F680E /* SmileLock_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E3A1CD1CCC6449005F680E /* SmileLock_ExampleUITests.swift */; };
-		B7E3A1E11CCC67A4005F680E /* PasswordLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E3A1DF1CCC67A4005F680E /* PasswordLoginViewController.swift */; };
-		B7E3A1E21CCC67A4005F680E /* PasswordLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E3A1E01CCC67A4005F680E /* PasswordLogin.storyboard */; };
-		B7E3A1E41CCC68A3005F680E /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E3A1E31CCC68A3005F680E /* extension.swift */; };
+		B7D5D1F51E35DD4000B7A6BF /* SmileLock_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5D1F41E35DD4000B7A6BF /* SmileLock_ExampleTests.swift */; };
+		B7D5D2001E35DD4000B7A6BF /* SmileLock_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5D1FF1E35DD4000B7A6BF /* SmileLock_ExampleUITests.swift */; };
+		B7D5D2181E35DD8000B7A6BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5D20D1E35DD8000B7A6BF /* AppDelegate.swift */; };
+		B7D5D2191E35DD8000B7A6BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7D5D20E1E35DD8000B7A6BF /* Assets.xcassets */; };
+		B7D5D21B1E35DD8000B7A6BF /* BlurPasswordLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5D2121E35DD8000B7A6BF /* BlurPasswordLoginViewController.swift */; };
+		B7D5D21C1E35DD8000B7A6BF /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5D2131E35DD8000B7A6BF /* extension.swift */; };
+		B7D5D21D1E35DD8000B7A6BF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5D2141E35DD8000B7A6BF /* HomeViewController.swift */; };
+		B7D5D21E1E35DD8000B7A6BF /* MyPasswordUIValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5D2151E35DD8000B7A6BF /* MyPasswordUIValidation.swift */; };
+		B7D5D21F1E35DD8000B7A6BF /* PasswordLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7D5D2161E35DD8000B7A6BF /* PasswordLogin.storyboard */; };
+		B7D5D2201E35DD8000B7A6BF /* PasswordLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5D2171E35DD8000B7A6BF /* PasswordLoginViewController.swift */; };
+		B7D5D2231E35DDA400B7A6BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7D5D2211E35DDA400B7A6BF /* LaunchScreen.storyboard */; };
+		B7D5D2261E35E1DF00B7A6BF /* SmileLock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D5D2251E35E1DF00B7A6BF /* SmileLock.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B7E3A1BF1CCC6449005F680E /* PBXContainerItemProxy */ = {
+		B7D5D1F11E35DD4000B7A6BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B7E3A1A21CCC6448005F680E /* Project object */;
+			containerPortal = B7D5D1D41E35DD4000B7A6BF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B7E3A1A91CCC6448005F680E;
+			remoteGlobalIDString = B7D5D1DB1E35DD4000B7A6BF;
 			remoteInfo = "SmileLock-Example";
 		};
-		B7E3A1CA1CCC6449005F680E /* PBXContainerItemProxy */ = {
+		B7D5D1FC1E35DD4000B7A6BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B7E3A1A21CCC6448005F680E /* Project object */;
+			containerPortal = B7D5D1D41E35DD4000B7A6BF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B7E3A1A91CCC6448005F680E;
+			remoteGlobalIDString = B7D5D1DB1E35DD4000B7A6BF;
 			remoteInfo = "SmileLock-Example";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3DA1702F1AC31AA3EDCA5FE7 /* Pods_SmileLock_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmileLock_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C52457304DEFE4405D2D34B /* Pods-SmileLock-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmileLock-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmileLock-Example/Pods-SmileLock-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B7A42F861CD2588B00FEB7B0 /* BlurPasswordLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurPasswordLoginViewController.swift; sourceTree = "<group>"; };
-		B7BAFB401D3B521F009E70FA /* MyPasswordUIValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPasswordUIValidation.swift; sourceTree = "<group>"; };
-		B7E18F271D4A0F3F00A740D4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		B7E3A1AA1CCC6448005F680E /* SmileLock-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmileLock-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7E3A1AD1CCC6449005F680E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7E3A1B41CCC6449005F680E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B7E3A1B71CCC6449005F680E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B7E3A1B91CCC6449005F680E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7E3A1BE1CCC6449005F680E /* SmileLock-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmileLock-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7E3A1C21CCC6449005F680E /* SmileLock_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileLock_ExampleTests.swift; sourceTree = "<group>"; };
-		B7E3A1C41CCC6449005F680E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7E3A1C91CCC6449005F680E /* SmileLock-ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmileLock-ExampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7E3A1CD1CCC6449005F680E /* SmileLock_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileLock_ExampleUITests.swift; sourceTree = "<group>"; };
-		B7E3A1CF1CCC6449005F680E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7E3A1DF1CCC67A4005F680E /* PasswordLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordLoginViewController.swift; sourceTree = "<group>"; };
-		B7E3A1E01CCC67A4005F680E /* PasswordLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PasswordLogin.storyboard; sourceTree = "<group>"; };
-		B7E3A1E31CCC68A3005F680E /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
-		F1E646CC82DCC7E6193CF7E7 /* Pods-SmileLock-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmileLock-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmileLock-Example/Pods-SmileLock-Example.release.xcconfig"; sourceTree = "<group>"; };
+		B7D5D1DC1E35DD4000B7A6BF /* SmileLock-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmileLock-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7D5D1EB1E35DD4000B7A6BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7D5D1F01E35DD4000B7A6BF /* SmileLock-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmileLock-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7D5D1F41E35DD4000B7A6BF /* SmileLock_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileLock_ExampleTests.swift; sourceTree = "<group>"; };
+		B7D5D1F61E35DD4000B7A6BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7D5D1FB1E35DD4000B7A6BF /* SmileLock-ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmileLock-ExampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7D5D1FF1E35DD4000B7A6BF /* SmileLock_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileLock_ExampleUITests.swift; sourceTree = "<group>"; };
+		B7D5D2011E35DD4000B7A6BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7D5D20D1E35DD8000B7A6BF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7D5D20E1E35DD8000B7A6BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7D5D2121E35DD8000B7A6BF /* BlurPasswordLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurPasswordLoginViewController.swift; sourceTree = "<group>"; };
+		B7D5D2131E35DD8000B7A6BF /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		B7D5D2141E35DD8000B7A6BF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B7D5D2151E35DD8000B7A6BF /* MyPasswordUIValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPasswordUIValidation.swift; sourceTree = "<group>"; };
+		B7D5D2161E35DD8000B7A6BF /* PasswordLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PasswordLogin.storyboard; sourceTree = "<group>"; };
+		B7D5D2171E35DD8000B7A6BF /* PasswordLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordLoginViewController.swift; sourceTree = "<group>"; };
+		B7D5D2221E35DDA400B7A6BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7D5D2251E35E1DF00B7A6BF /* SmileLock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SmileLock.framework; path = "../../../Library/Developer/Xcode/DerivedData/SmileLock-ajzpnxfkdodllockkvedjjxpuxiv/Build/Products/Debug-iphonesimulator/SmileLock.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B7E3A1A71CCC6448005F680E /* Frameworks */ = {
+		B7D5D1D91E35DD4000B7A6BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95284A1808A8C082E917AD51 /* Pods_SmileLock_Example.framework in Frameworks */,
+				B7D5D2261E35E1DF00B7A6BF /* SmileLock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7E3A1BB1CCC6449005F680E /* Frameworks */ = {
+		B7D5D1ED1E35DD4000B7A6BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7E3A1C61CCC6449005F680E /* Frameworks */ = {
+		B7D5D1F81E35DD4000B7A6BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -87,93 +85,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		84610C31033B689ADD8164FA /* Pods */ = {
+		B7D5D1D31E35DD4000B7A6BF = {
 			isa = PBXGroup;
 			children = (
-				7C52457304DEFE4405D2D34B /* Pods-SmileLock-Example.debug.xcconfig */,
-				F1E646CC82DCC7E6193CF7E7 /* Pods-SmileLock-Example.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		9AD50015CB0A58A7A6FCD930 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3DA1702F1AC31AA3EDCA5FE7 /* Pods_SmileLock_Example.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B7E3A1A11CCC6448005F680E = {
-			isa = PBXGroup;
-			children = (
-				B7E3A1AC1CCC6448005F680E /* SmileLock-Example */,
-				B7E3A1C11CCC6449005F680E /* SmileLock-ExampleTests */,
-				B7E3A1CC1CCC6449005F680E /* SmileLock-ExampleUITests */,
-				B7E3A1AB1CCC6448005F680E /* Products */,
-				84610C31033B689ADD8164FA /* Pods */,
-				9AD50015CB0A58A7A6FCD930 /* Frameworks */,
+				B7D5D1DE1E35DD4000B7A6BF /* SmileLock-Example */,
+				B7D5D1F31E35DD4000B7A6BF /* SmileLock-ExampleTests */,
+				B7D5D1FE1E35DD4000B7A6BF /* SmileLock-ExampleUITests */,
+				B7D5D1DD1E35DD4000B7A6BF /* Products */,
+				B7D5D2241E35E1DF00B7A6BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		B7E3A1AB1CCC6448005F680E /* Products */ = {
+		B7D5D1DD1E35DD4000B7A6BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B7E3A1AA1CCC6448005F680E /* SmileLock-Example.app */,
-				B7E3A1BE1CCC6449005F680E /* SmileLock-ExampleTests.xctest */,
-				B7E3A1C91CCC6449005F680E /* SmileLock-ExampleUITests.xctest */,
+				B7D5D1DC1E35DD4000B7A6BF /* SmileLock-Example.app */,
+				B7D5D1F01E35DD4000B7A6BF /* SmileLock-ExampleTests.xctest */,
+				B7D5D1FB1E35DD4000B7A6BF /* SmileLock-ExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B7E3A1AC1CCC6448005F680E /* SmileLock-Example */ = {
+		B7D5D1DE1E35DD4000B7A6BF /* SmileLock-Example */ = {
 			isa = PBXGroup;
 			children = (
-				B7E3A1AD1CCC6449005F680E /* AppDelegate.swift */,
-				B7E3A1E31CCC68A3005F680E /* extension.swift */,
-				B7E18F271D4A0F3F00A740D4 /* HomeViewController.swift */,
-				B7BAFB401D3B521F009E70FA /* MyPasswordUIValidation.swift */,
-				B7E3A1DF1CCC67A4005F680E /* PasswordLoginViewController.swift */,
-				B7A42F861CD2588B00FEB7B0 /* BlurPasswordLoginViewController.swift */,
-				B7E3A1E01CCC67A4005F680E /* PasswordLogin.storyboard */,
-				B7E3A1B41CCC6449005F680E /* Assets.xcassets */,
-				B7E3A1B61CCC6449005F680E /* LaunchScreen.storyboard */,
-				B7E3A1B91CCC6449005F680E /* Info.plist */,
+				B7D5D2211E35DDA400B7A6BF /* LaunchScreen.storyboard */,
+				B7D5D2161E35DD8000B7A6BF /* PasswordLogin.storyboard */,
+				B7D5D20E1E35DD8000B7A6BF /* Assets.xcassets */,
+				B7D5D20D1E35DD8000B7A6BF /* AppDelegate.swift */,
+				B7D5D2141E35DD8000B7A6BF /* HomeViewController.swift */,
+				B7D5D2171E35DD8000B7A6BF /* PasswordLoginViewController.swift */,
+				B7D5D2121E35DD8000B7A6BF /* BlurPasswordLoginViewController.swift */,
+				B7D5D2151E35DD8000B7A6BF /* MyPasswordUIValidation.swift */,
+				B7D5D2131E35DD8000B7A6BF /* extension.swift */,
+				B7D5D1EB1E35DD4000B7A6BF /* Info.plist */,
 			);
 			path = "SmileLock-Example";
 			sourceTree = "<group>";
 		};
-		B7E3A1C11CCC6449005F680E /* SmileLock-ExampleTests */ = {
+		B7D5D1F31E35DD4000B7A6BF /* SmileLock-ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				B7E3A1C21CCC6449005F680E /* SmileLock_ExampleTests.swift */,
-				B7E3A1C41CCC6449005F680E /* Info.plist */,
+				B7D5D1F41E35DD4000B7A6BF /* SmileLock_ExampleTests.swift */,
+				B7D5D1F61E35DD4000B7A6BF /* Info.plist */,
 			);
 			path = "SmileLock-ExampleTests";
 			sourceTree = "<group>";
 		};
-		B7E3A1CC1CCC6449005F680E /* SmileLock-ExampleUITests */ = {
+		B7D5D1FE1E35DD4000B7A6BF /* SmileLock-ExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				B7E3A1CD1CCC6449005F680E /* SmileLock_ExampleUITests.swift */,
-				B7E3A1CF1CCC6449005F680E /* Info.plist */,
+				B7D5D1FF1E35DD4000B7A6BF /* SmileLock_ExampleUITests.swift */,
+				B7D5D2011E35DD4000B7A6BF /* Info.plist */,
 			);
 			path = "SmileLock-ExampleUITests";
+			sourceTree = "<group>";
+		};
+		B7D5D2241E35E1DF00B7A6BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7D5D2251E35E1DF00B7A6BF /* SmileLock.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B7E3A1A91CCC6448005F680E /* SmileLock-Example */ = {
+		B7D5D1DB1E35DD4000B7A6BF /* SmileLock-Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B7E3A1D21CCC6449005F680E /* Build configuration list for PBXNativeTarget "SmileLock-Example" */;
+			buildConfigurationList = B7D5D2041E35DD4000B7A6BF /* Build configuration list for PBXNativeTarget "SmileLock-Example" */;
 			buildPhases = (
-				E94D3D0076E59F50141B5508 /* Check Pods Manifest.lock */,
-				B7E3A1A61CCC6448005F680E /* Sources */,
-				B7E3A1A71CCC6448005F680E /* Frameworks */,
-				B7E3A1A81CCC6448005F680E /* Resources */,
-				54F640F528E29B80C9A5B31A /* Embed Pods Frameworks */,
-				691BACA772A8A94723A9A37F /* Copy Pods Resources */,
+				B7D5D1D81E35DD4000B7A6BF /* Sources */,
+				B7D5D1D91E35DD4000B7A6BF /* Frameworks */,
+				B7D5D1DA1E35DD4000B7A6BF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -181,72 +166,73 @@
 			);
 			name = "SmileLock-Example";
 			productName = "SmileLock-Example";
-			productReference = B7E3A1AA1CCC6448005F680E /* SmileLock-Example.app */;
+			productReference = B7D5D1DC1E35DD4000B7A6BF /* SmileLock-Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B7E3A1BD1CCC6449005F680E /* SmileLock-ExampleTests */ = {
+		B7D5D1EF1E35DD4000B7A6BF /* SmileLock-ExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B7E3A1D51CCC6449005F680E /* Build configuration list for PBXNativeTarget "SmileLock-ExampleTests" */;
+			buildConfigurationList = B7D5D2071E35DD4000B7A6BF /* Build configuration list for PBXNativeTarget "SmileLock-ExampleTests" */;
 			buildPhases = (
-				B7E3A1BA1CCC6449005F680E /* Sources */,
-				B7E3A1BB1CCC6449005F680E /* Frameworks */,
-				B7E3A1BC1CCC6449005F680E /* Resources */,
+				B7D5D1EC1E35DD4000B7A6BF /* Sources */,
+				B7D5D1ED1E35DD4000B7A6BF /* Frameworks */,
+				B7D5D1EE1E35DD4000B7A6BF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B7E3A1C01CCC6449005F680E /* PBXTargetDependency */,
+				B7D5D1F21E35DD4000B7A6BF /* PBXTargetDependency */,
 			);
 			name = "SmileLock-ExampleTests";
 			productName = "SmileLock-ExampleTests";
-			productReference = B7E3A1BE1CCC6449005F680E /* SmileLock-ExampleTests.xctest */;
+			productReference = B7D5D1F01E35DD4000B7A6BF /* SmileLock-ExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B7E3A1C81CCC6449005F680E /* SmileLock-ExampleUITests */ = {
+		B7D5D1FA1E35DD4000B7A6BF /* SmileLock-ExampleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B7E3A1D81CCC6449005F680E /* Build configuration list for PBXNativeTarget "SmileLock-ExampleUITests" */;
+			buildConfigurationList = B7D5D20A1E35DD4000B7A6BF /* Build configuration list for PBXNativeTarget "SmileLock-ExampleUITests" */;
 			buildPhases = (
-				B7E3A1C51CCC6449005F680E /* Sources */,
-				B7E3A1C61CCC6449005F680E /* Frameworks */,
-				B7E3A1C71CCC6449005F680E /* Resources */,
+				B7D5D1F71E35DD4000B7A6BF /* Sources */,
+				B7D5D1F81E35DD4000B7A6BF /* Frameworks */,
+				B7D5D1F91E35DD4000B7A6BF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B7E3A1CB1CCC6449005F680E /* PBXTargetDependency */,
+				B7D5D1FD1E35DD4000B7A6BF /* PBXTargetDependency */,
 			);
 			name = "SmileLock-ExampleUITests";
 			productName = "SmileLock-ExampleUITests";
-			productReference = B7E3A1C91CCC6449005F680E /* SmileLock-ExampleUITests.xctest */;
+			productReference = B7D5D1FB1E35DD4000B7A6BF /* SmileLock-ExampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B7E3A1A21CCC6448005F680E /* Project object */ = {
+		B7D5D1D41E35DD4000B7A6BF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = rain;
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "RECRUIT LIFESTYLE CO., LTD.";
 				TargetAttributes = {
-					B7E3A1A91CCC6448005F680E = {
-						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
+					B7D5D1DB1E35DD4000B7A6BF = {
+						CreatedOnToolsVersion = 8.2;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
 					};
-					B7E3A1BD1CCC6449005F680E = {
-						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
-						TestTargetID = B7E3A1A91CCC6448005F680E;
+					B7D5D1EF1E35DD4000B7A6BF = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B7D5D1DB1E35DD4000B7A6BF;
 					};
-					B7E3A1C81CCC6449005F680E = {
-						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
-						TestTargetID = B7E3A1A91CCC6448005F680E;
+					B7D5D1FA1E35DD4000B7A6BF = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B7D5D1DB1E35DD4000B7A6BF;
 					};
 				};
 			};
-			buildConfigurationList = B7E3A1A51CCC6448005F680E /* Build configuration list for PBXProject "SmileLock-Example" */;
+			buildConfigurationList = B7D5D1D71E35DD4000B7A6BF /* Build configuration list for PBXProject "SmileLock-Example" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -254,37 +240,37 @@
 				en,
 				Base,
 			);
-			mainGroup = B7E3A1A11CCC6448005F680E;
-			productRefGroup = B7E3A1AB1CCC6448005F680E /* Products */;
+			mainGroup = B7D5D1D31E35DD4000B7A6BF;
+			productRefGroup = B7D5D1DD1E35DD4000B7A6BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B7E3A1A91CCC6448005F680E /* SmileLock-Example */,
-				B7E3A1BD1CCC6449005F680E /* SmileLock-ExampleTests */,
-				B7E3A1C81CCC6449005F680E /* SmileLock-ExampleUITests */,
+				B7D5D1DB1E35DD4000B7A6BF /* SmileLock-Example */,
+				B7D5D1EF1E35DD4000B7A6BF /* SmileLock-ExampleTests */,
+				B7D5D1FA1E35DD4000B7A6BF /* SmileLock-ExampleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B7E3A1A81CCC6448005F680E /* Resources */ = {
+		B7D5D1DA1E35DD4000B7A6BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E3A1B81CCC6449005F680E /* LaunchScreen.storyboard in Resources */,
-				B7E3A1B51CCC6449005F680E /* Assets.xcassets in Resources */,
-				B7E3A1E21CCC67A4005F680E /* PasswordLogin.storyboard in Resources */,
+				B7D5D2231E35DDA400B7A6BF /* LaunchScreen.storyboard in Resources */,
+				B7D5D2191E35DD8000B7A6BF /* Assets.xcassets in Resources */,
+				B7D5D21F1E35DD8000B7A6BF /* PasswordLogin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7E3A1BC1CCC6449005F680E /* Resources */ = {
+		B7D5D1EE1E35DD4000B7A6BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7E3A1C71CCC6449005F680E /* Resources */ = {
+		B7D5D1F91E35DD4000B7A6BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -293,104 +279,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		54F640F528E29B80C9A5B31A /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmileLock-Example/Pods-SmileLock-Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		691BACA772A8A94723A9A37F /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmileLock-Example/Pods-SmileLock-Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E94D3D0076E59F50141B5508 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		B7E3A1A61CCC6448005F680E /* Sources */ = {
+		B7D5D1D81E35DD4000B7A6BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7A42F881CD2588B00FEB7B0 /* BlurPasswordLoginViewController.swift in Sources */,
-				B7E3A1E41CCC68A3005F680E /* extension.swift in Sources */,
-				B7E3A1AE1CCC6449005F680E /* AppDelegate.swift in Sources */,
-				B7E3A1E11CCC67A4005F680E /* PasswordLoginViewController.swift in Sources */,
-				B7BAFB411D3B521F009E70FA /* MyPasswordUIValidation.swift in Sources */,
-				B7E18F281D4A0F3F00A740D4 /* HomeViewController.swift in Sources */,
+				B7D5D21C1E35DD8000B7A6BF /* extension.swift in Sources */,
+				B7D5D21B1E35DD8000B7A6BF /* BlurPasswordLoginViewController.swift in Sources */,
+				B7D5D2181E35DD8000B7A6BF /* AppDelegate.swift in Sources */,
+				B7D5D2201E35DD8000B7A6BF /* PasswordLoginViewController.swift in Sources */,
+				B7D5D21D1E35DD8000B7A6BF /* HomeViewController.swift in Sources */,
+				B7D5D21E1E35DD8000B7A6BF /* MyPasswordUIValidation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7E3A1BA1CCC6449005F680E /* Sources */ = {
+		B7D5D1EC1E35DD4000B7A6BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E3A1C31CCC6449005F680E /* SmileLock_ExampleTests.swift in Sources */,
+				B7D5D1F51E35DD4000B7A6BF /* SmileLock_ExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7E3A1C51CCC6449005F680E /* Sources */ = {
+		B7D5D1F71E35DD4000B7A6BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E3A1CE1CCC6449005F680E /* SmileLock_ExampleUITests.swift in Sources */,
+				B7D5D2001E35DD4000B7A6BF /* SmileLock_ExampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B7E3A1C01CCC6449005F680E /* PBXTargetDependency */ = {
+		B7D5D1F21E35DD4000B7A6BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B7E3A1A91CCC6448005F680E /* SmileLock-Example */;
-			targetProxy = B7E3A1BF1CCC6449005F680E /* PBXContainerItemProxy */;
+			target = B7D5D1DB1E35DD4000B7A6BF /* SmileLock-Example */;
+			targetProxy = B7D5D1F11E35DD4000B7A6BF /* PBXContainerItemProxy */;
 		};
-		B7E3A1CB1CCC6449005F680E /* PBXTargetDependency */ = {
+		B7D5D1FD1E35DD4000B7A6BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B7E3A1A91CCC6448005F680E /* SmileLock-Example */;
-			targetProxy = B7E3A1CA1CCC6449005F680E /* PBXContainerItemProxy */;
+			target = B7D5D1DB1E35DD4000B7A6BF /* SmileLock-Example */;
+			targetProxy = B7D5D1FC1E35DD4000B7A6BF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B7E3A1B61CCC6449005F680E /* LaunchScreen.storyboard */ = {
+		B7D5D2211E35DDA400B7A6BF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B7E3A1B71CCC6449005F680E /* Base */,
+				B7D5D2221E35DDA400B7A6BF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -398,7 +336,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B7E3A1D01CCC6449005F680E /* Debug */ = {
+		B7D5D2021E35DD4000B7A6BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -410,6 +348,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -437,16 +376,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B7E3A1D11CCC6449005F680E /* Release */ = {
+		B7D5D2031E35DD4000B7A6BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -458,6 +398,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -479,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -488,80 +429,83 @@
 			};
 			name = Release;
 		};
-		B7E3A1D31CCC6449005F680E /* Debug */ = {
+		B7D5D2051E35DD4000B7A6BF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C52457304DEFE4405D2D34B /* Pods-SmileLock-Example.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "SmileLock-Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.SmileLock-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.recruit.SmileLock-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		B7E3A1D41CCC6449005F680E /* Release */ = {
+		B7D5D2061E35DD4000B7A6BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1E646CC82DCC7E6193CF7E7 /* Pods-SmileLock-Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "SmileLock-Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.SmileLock-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.recruit.SmileLock-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		B7E3A1D61CCC6449005F680E /* Debug */ = {
+		B7D5D2081E35DD4000B7A6BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "SmileLock-ExampleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.SmileLock-ExampleTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.recruit.SmileLock-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmileLock-Example.app/SmileLock-Example";
 			};
 			name = Debug;
 		};
-		B7E3A1D71CCC6449005F680E /* Release */ = {
+		B7D5D2091E35DD4000B7A6BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "SmileLock-ExampleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.SmileLock-ExampleTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.recruit.SmileLock-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmileLock-Example.app/SmileLock-Example";
 			};
 			name = Release;
 		};
-		B7E3A1D91CCC6449005F680E /* Debug */ = {
+		B7D5D20B1E35DD4000B7A6BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "SmileLock-ExampleUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.SmileLock-ExampleUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.recruit.SmileLock-ExampleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "SmileLock-Example";
 			};
 			name = Debug;
 		};
-		B7E3A1DA1CCC6449005F680E /* Release */ = {
+		B7D5D20C1E35DD4000B7A6BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "SmileLock-ExampleUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.SmileLock-ExampleUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.recruit.SmileLock-ExampleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "SmileLock-Example";
@@ -571,43 +515,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B7E3A1A51CCC6448005F680E /* Build configuration list for PBXProject "SmileLock-Example" */ = {
+		B7D5D1D71E35DD4000B7A6BF /* Build configuration list for PBXProject "SmileLock-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7E3A1D01CCC6449005F680E /* Debug */,
-				B7E3A1D11CCC6449005F680E /* Release */,
+				B7D5D2021E35DD4000B7A6BF /* Debug */,
+				B7D5D2031E35DD4000B7A6BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B7E3A1D21CCC6449005F680E /* Build configuration list for PBXNativeTarget "SmileLock-Example" */ = {
+		B7D5D2041E35DD4000B7A6BF /* Build configuration list for PBXNativeTarget "SmileLock-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7E3A1D31CCC6449005F680E /* Debug */,
-				B7E3A1D41CCC6449005F680E /* Release */,
+				B7D5D2051E35DD4000B7A6BF /* Debug */,
+				B7D5D2061E35DD4000B7A6BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B7E3A1D51CCC6449005F680E /* Build configuration list for PBXNativeTarget "SmileLock-ExampleTests" */ = {
+		B7D5D2071E35DD4000B7A6BF /* Build configuration list for PBXNativeTarget "SmileLock-ExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7E3A1D61CCC6449005F680E /* Debug */,
-				B7E3A1D71CCC6449005F680E /* Release */,
+				B7D5D2081E35DD4000B7A6BF /* Debug */,
+				B7D5D2091E35DD4000B7A6BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B7E3A1D81CCC6449005F680E /* Build configuration list for PBXNativeTarget "SmileLock-ExampleUITests" */ = {
+		B7D5D20A1E35DD4000B7A6BF /* Build configuration list for PBXNativeTarget "SmileLock-ExampleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7E3A1D91CCC6449005F680E /* Debug */,
-				B7E3A1DA1CCC6449005F680E /* Release */,
+				B7D5D20B1E35DD4000B7A6BF /* Debug */,
+				B7D5D20C1E35DD4000B7A6BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B7E3A1A21CCC6448005F680E /* Project object */;
+	rootObject = B7D5D1D41E35DD4000B7A6BF /* Project object */;
 }

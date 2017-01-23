@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SmileLock-Example.xcodeproj">
+      location = "group:SmileLock-Example/SmileLock-Example.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "container:SmileLock.xcodeproj">
    </FileRef>
 </Workspace>
