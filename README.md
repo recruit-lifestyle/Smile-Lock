@@ -1,6 +1,7 @@
 # SmileLock
 
 [![GitHub Issues](http://img.shields.io/github/issues/recruit-lifestyle/Smile-Lock.svg?style=flat)](https://github.com/recruit-lifestyle/Smile-Lock/issues)
+<a href="https://github.com/Carthage/Carthage/"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 [![Version](https://img.shields.io/cocoapods/v/SmileLock.svg?style=flat)](http://cocoadocs.org/docsets/SmileLock)
 [![License](https://img.shields.io/cocoapods/l/SmileLock.svg?style=flat)](http://cocoadocs.org/docsets/SmileLock)
 [![Platform](https://img.shields.io/cocoapods/p/SmileLock.svg?style=flat)](http://cocoadocs.org/docsets/SmileLock)
