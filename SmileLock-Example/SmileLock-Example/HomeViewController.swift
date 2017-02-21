@@ -26,7 +26,8 @@ class HomeViewController: UIViewController {
     
     func present(_ id: String) {
         let loginVC = storyboard?.instantiateViewController(withIdentifier: id)
-        loginVC?.modalTransitionStyle = .crossDissolve
+        // in iOS 10, the crossDissolve transtion is wired
+//        loginVC?.modalTransitionStyle = .crossDissolve
         loginVC?.modalPresentationStyle = .overCurrentContext
         present(loginVC!, animated: true, completion: nil)
     }
