@@ -10,8 +10,8 @@ A library for make a beautiful Passcode Lock View, also support Touch ID.
 
 <img src="SmileLock-Example/demo_gif/smilelock_logo.png" width="600">
 
-<img src="SmileLock-Example/demo_gif/demo.gif" width="400">
-<img src="SmileLock-Example/demo_gif/demo_blur.gif" width="400">
+<img src="SmileLock-Example/demo_gif/demo.gif" width="300">
+<img src="SmileLock-Example/demo_gif/demo_blur.gif" width="300">
 
 
 # Requirements
