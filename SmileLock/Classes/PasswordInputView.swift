@@ -119,7 +119,7 @@ open class PasswordInputView: UIView {
         circleView.layer.borderWidth = isVibrancyEffect ? borderWidth : 0
         
         //update mask
-        let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2.0 * CGFloat(M_PI), clockwise: false)
+        let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2.0 * CGFloat(Double.pi), clockwise: false)
         let maskLayer = CAShapeLayer()
         maskLayer.path = path.cgPath
         layer.mask = maskLayer

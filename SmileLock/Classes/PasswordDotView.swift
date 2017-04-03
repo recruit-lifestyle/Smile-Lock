@@ -160,7 +160,7 @@ private extension PasswordDotView {
 
 internal extension UIBezierPath {
     convenience init(circleWithCenter center: CGPoint, radius: CGFloat, lineWidth: CGFloat) {
-        self.init(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2.0 * CGFloat(M_PI), clockwise: false)
+        self.init(arcCenter: center, radius: radius, startAngle: 0, endAngle: 2.0 * CGFloat(Double.pi), clockwise: false)
         self.lineWidth = lineWidth
     }
 }
