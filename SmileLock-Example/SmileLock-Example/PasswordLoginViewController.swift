@@ -23,6 +23,7 @@ class PasswordLoginViewController: UIViewController {
         //create PasswordContainerView
         passwordContainerView = PasswordContainerView.create(in: passwordStackView, digit: kPasswordDigit)
         passwordContainerView.delegate = self
+        passwordContainerView.deleteButtonLocalizedTitle = "smilelock_delete"
         
         //customize password UI
         passwordContainerView.tintColor = UIColor.color(.textColor)

@@ -22,6 +22,12 @@ open class PasswordContainerView: UIView {
     @IBOutlet weak var touchAuthenticationButton: UIButton!
     
     //MARK: Property
+    open var deleteButtonLocalizedTitle: String = "" {
+        didSet {
+            deleteButton.setTitle(NSLocalizedString(deleteButtonLocalizedTitle, comment: ""), for: .normal)
+        }
+    }
+    
     open weak var delegate: PasswordInputCompleteProtocol?
     fileprivate var touchIDContext = LAContext()
     
