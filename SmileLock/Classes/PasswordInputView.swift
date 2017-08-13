@@ -103,7 +103,7 @@ open class PasswordInputView: UIView {
         let center = CGPoint(x: width/2, y: height/2)
         let radius = min(width, height) / 2
         let borderWidth = radius * borderWidthRatio
-        let circleRadius = radius - borderWidth
+        let circleRadius = radius// - borderWidth
         
         //update label
         label.text = numberString
@@ -123,9 +123,14 @@ open class PasswordInputView: UIView {
         let maskLayer = CAShapeLayer()
         maskLayer.path = path.cgPath
         layer.mask = maskLayer
+        maskLayer.fillColor = UIColor.clear.cgColor
+        maskLayer.strokeColor = borderColor.cgColor
+        maskLayer.lineWidth = CGFloat(borderWidth)
+        layer.addSublayer(maskLayer)
         
         //update color
-        backgroundColor = borderColor
+        //backgroundColor = borderColor
+        backgroundColor = .clear
     }
 }
 
@@ -150,9 +155,9 @@ private extension PasswordInputView {
         let originFont = label.font
         label.font = UIFont.systemFont(ofSize: originFont!.pointSize, weight: UIFontWeightLight)
         label.textColor = highlightTextColor
-        if !self.isVibrancyEffect {
-            backgroundColor = highlightBackgroundColor
-        }
+        //if !self.isVibrancyEffect {
+        //    backgroundColor = highlightBackgroundColor
+        //}
         circleView.backgroundColor = highlightBackgroundColor
     }
     
@@ -160,7 +165,7 @@ private extension PasswordInputView {
         let originFont = label.font
         label.font = UIFont.systemFont(ofSize: originFont!.pointSize, weight: UIFontWeightThin)
         label.textColor = textColor
-        backgroundColor = borderColor
+        //backgroundColor = borderColor
         circleView.backgroundColor = circleBackgroundColor
     }
     
