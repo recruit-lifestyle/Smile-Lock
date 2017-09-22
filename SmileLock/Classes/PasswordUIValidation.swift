@@ -6,7 +6,7 @@
 //
 
 open class PasswordUIValidation<T>: PasswordInputCompleteProtocol {
-    public typealias Failure    = (Void) -> Void
+    public typealias Failure    = () -> Void
     public typealias Success    = (T) -> Void
     public typealias Validation = (String) -> T?
     
@@ -32,7 +32,7 @@ open class PasswordUIValidation<T>: PasswordInputCompleteProtocol {
     open func passwordInputComplete(_ passwordContainerView: PasswordContainerView, input: String) {
         guard let model = self.validation?(input) else {
             passwordContainerView.wrongPassword()
-            failure?()
+          failure?()
             return
         }
         success?(model)
