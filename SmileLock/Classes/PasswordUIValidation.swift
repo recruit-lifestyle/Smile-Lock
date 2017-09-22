@@ -32,7 +32,7 @@ open class PasswordUIValidation<T>: PasswordInputCompleteProtocol {
     open func passwordInputComplete(_ passwordContainerView: PasswordContainerView, input: String) {
         guard let model = self.validation?(input) else {
             passwordContainerView.wrongPassword()
-          failure?()
+            failure?()
             return
         }
         success?(model)

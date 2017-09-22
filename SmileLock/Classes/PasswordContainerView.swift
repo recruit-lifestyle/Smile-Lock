@@ -94,7 +94,7 @@ open class PasswordContainerView: UIView {
     fileprivate func configureConstraints() {
         let ratioConstraint = widthAnchor.constraint(equalTo: self.heightAnchor, multiplier: kDefaultWidth / kDefaultHeight)
         self.widthConstraint = widthAnchor.constraint(equalToConstant: kDefaultWidth)
-      self.widthConstraint.priority = UILayoutPriority(rawValue: 999)
+        self.widthConstraint.priority = UILayoutPriority(rawValue: 999)
         NSLayoutConstraint.activate([ratioConstraint, widthConstraint])
     }
     
