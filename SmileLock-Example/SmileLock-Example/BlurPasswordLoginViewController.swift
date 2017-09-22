@@ -26,7 +26,7 @@ class BlurPasswordLoginViewController: UIViewController {
             self?.dismiss(animated: true, completion: nil)
         }
         
-        passwordUIValidation.failure = { _ in
+        passwordUIValidation.failure = {
             //do not forget add [weak self] if the view controller become nil at some point during its lifetime
             print("*️⃣ failure!")
         }
