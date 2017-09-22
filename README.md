@@ -17,7 +17,7 @@ A library for make a beautiful Passcode Lock View, also support Touch ID.
 # Requirements
 
 - iOS 9.0+
-- Swift 3 (pod version 2.x), Swift 2.3 (pod version 1.x)
+- Swift 4 (pod version 3.x), Swift 3 (pod version 2.x), Swift 2.3 (pod version 1.x)
 
 #What can it do for you?
 
