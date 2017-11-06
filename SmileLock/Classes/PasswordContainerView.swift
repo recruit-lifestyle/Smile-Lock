@@ -33,7 +33,7 @@ open class PasswordContainerView: UIView {
     
     fileprivate var inputString: String = "" {
         didSet {
-            passwordDotView.inputDotCount = inputString.characters.count
+            passwordDotView.inputDotCount = inputString.count
             checkInputComplete()
         }
     }
@@ -154,10 +154,10 @@ open class PasswordContainerView: UIView {
     
     //MARK: IBAction
     @IBAction func deleteInputString(_ sender: AnyObject) {
-        guard inputString.characters.count > 0 && !passwordDotView.isFull else {
+        guard inputString.count > 0 && !passwordDotView.isFull else {
             return
         }
-        inputString = String(inputString.characters.dropLast())
+        inputString = String(inputString.dropLast())
     }
     
     @IBAction func touchAuthenticationAction(_ sender: UIButton) {
@@ -177,7 +177,7 @@ open class PasswordContainerView: UIView {
 
 private extension PasswordContainerView {
     func checkInputComplete() {
-        if inputString.characters.count == passwordDotView.totalDotCount {
+        if inputString.count == passwordDotView.totalDotCount {
             delegate?.passwordInputComplete(self, input: inputString)
         }
     }
@@ -243,7 +243,7 @@ private extension PasswordContainerView {
 
 extension PasswordContainerView: PasswordInputViewTappedProtocol {
     public func passwordInputView(_ passwordInputView: PasswordInputView, tappedString: String) {
-        guard inputString.characters.count < passwordDotView.totalDotCount else {
+        guard inputString.count < passwordDotView.totalDotCount else {
             return
         }
         inputString += tappedString
