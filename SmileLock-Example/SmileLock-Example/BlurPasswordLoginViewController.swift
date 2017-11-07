@@ -35,5 +35,6 @@ class BlurPasswordLoginViewController: UIViewController {
         passwordUIValidation.view.rearrangeForVisualEffectView(in: self)
         
         passwordUIValidation.view.deleteButtonLocalizedTitle = "smilelock_delete"
+        passwordUIValidation.view.cancelButtonLocalizedTitle = "smilelock_cancel"
     }
 }
