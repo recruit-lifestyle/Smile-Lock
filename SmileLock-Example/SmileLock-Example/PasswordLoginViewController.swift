@@ -24,6 +24,7 @@ class PasswordLoginViewController: UIViewController {
         passwordContainerView = PasswordContainerView.create(in: passwordStackView, digit: kPasswordDigit)
         passwordContainerView.delegate = self
         passwordContainerView.deleteButtonLocalizedTitle = "smilelock_delete"
+        passwordContainerView.cancelButtonLocalizedTitle = "smilelock_cancel"
         
         //customize password UI
         passwordContainerView.tintColor = UIColor.color(.textColor)
@@ -46,6 +47,9 @@ extension PasswordLoginViewController: PasswordInputCompleteProtocol {
         } else {
             passwordContainerView.clearInput()
         }
+    }
+
+    open func onCancel(_ passwordContainerView: PasswordContainerView) {
     }
 }
 

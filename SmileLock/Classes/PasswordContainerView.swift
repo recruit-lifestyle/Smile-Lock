@@ -11,6 +11,7 @@ import LocalAuthentication
 public protocol PasswordInputCompleteProtocol: class {
     func passwordInputComplete(_ passwordContainerView: PasswordContainerView, input: String)
     func touchAuthenticationComplete(_ passwordContainerView: PasswordContainerView, success: Bool, error: Error?)
+    func onCancel(_ passwordContainerView: PasswordContainerView)
 }
 
 open class PasswordContainerView: UIView {
@@ -18,13 +19,19 @@ open class PasswordContainerView: UIView {
     //MARK: IBOutlet
     @IBOutlet open var passwordInputViews: [PasswordInputView]!
     @IBOutlet open weak var passwordDotView: PasswordDotView!
-    @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var touchAuthenticationButton: UIButton!
+    @IBOutlet open weak var deleteButton: UIButton!
+    @IBOutlet open weak var touchAuthenticationButton: UIButton!
     
     //MARK: Property
     open var deleteButtonLocalizedTitle: String = "" {
         didSet {
             deleteButton.setTitle(NSLocalizedString(deleteButtonLocalizedTitle, comment: ""), for: .normal)
+        }
+    }
+
+    open var cancelButtonLocalizedTitle: String = "" {
+        didSet {
+            deleteButton.setTitle(NSLocalizedString(cancelButtonLocalizedTitle, comment: ""), for: .normal)
         }
     }
     
@@ -35,6 +42,11 @@ open class PasswordContainerView: UIView {
         didSet {
             passwordDotView.inputDotCount = inputString.count
             checkInputComplete()
+            if inputString == "" {
+                deleteButton.setTitle(cancelButtonLocalizedTitle, for: .normal)
+            } else {
+                deleteButton.setTitle(deleteButtonLocalizedTitle, for: .normal)
+            }
         }
     }
     
@@ -133,6 +145,7 @@ open class PasswordContainerView: UIView {
         passwordInputViews.forEach {
             $0.delegate = self
         }
+        deleteButton.setTitle(deleteButtonLocalizedTitle, for: .normal)
         deleteButton.titleLabel?.adjustsFontSizeToFitWidth = true
         deleteButton.titleLabel?.minimumScaleFactor = 0.5
         touchAuthenticationEnabled = true
@@ -154,10 +167,11 @@ open class PasswordContainerView: UIView {
     
     //MARK: IBAction
     @IBAction func deleteInputString(_ sender: AnyObject) {
-        guard inputString.count > 0 && !passwordDotView.isFull else {
-            return
+        if inputString.count == 0 {
+            delegate?.onCancel(self)
+        } else if inputString.count > 0 && !passwordDotView.isFull {
+            inputString = String(inputString.dropLast())
         }
-        inputString = String(inputString.dropLast())
     }
     
     @IBAction func touchAuthenticationAction(_ sender: UIButton) {
