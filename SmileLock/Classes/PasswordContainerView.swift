@@ -18,8 +18,8 @@ open class PasswordContainerView: UIView {
     //MARK: IBOutlet
     @IBOutlet open var passwordInputViews: [PasswordInputView]!
     @IBOutlet open weak var passwordDotView: PasswordDotView!
-    @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var touchAuthenticationButton: UIButton!
+    @IBOutlet open weak var deleteButton: UIButton!
+    @IBOutlet open weak var touchAuthenticationButton: UIButton!
     
     //MARK: Property
     open var deleteButtonLocalizedTitle: String = "" {
@@ -33,7 +33,12 @@ open class PasswordContainerView: UIView {
     
     fileprivate var inputString: String = "" {
         didSet {
-            passwordDotView.inputDotCount = inputString.characters.count
+            #if swift(>=3.2)
+                passwordDotView.inputDotCount = inputString.count
+            #else
+                passwordDotView.inputDotCount = inputString.characters.count
+            #endif
+            
             checkInputComplete()
         }
     }
@@ -154,10 +159,17 @@ open class PasswordContainerView: UIView {
     
     //MARK: IBAction
     @IBAction func deleteInputString(_ sender: AnyObject) {
-        guard inputString.characters.count > 0 && !passwordDotView.isFull else {
+        #if swift(>=3.2)
+            guard inputString.count > 0 && !passwordDotView.isFull else {
+                return
+            }
+            inputString = String(inputString.dropLast())
+        #else
+            guard inputString.characters.count > 0 && !passwordDotView.isFull else {
             return
-        }
-        inputString = String(inputString.characters.dropLast())
+            }
+            inputString = String(inputString.characters.dropLast())
+        #endif
     }
     
     @IBAction func touchAuthenticationAction(_ sender: UIButton) {
@@ -177,10 +189,17 @@ open class PasswordContainerView: UIView {
 
 private extension PasswordContainerView {
     func checkInputComplete() {
-        if inputString.characters.count == passwordDotView.totalDotCount {
+        #if swift(>=3.2)
+            if inputString.count == passwordDotView.totalDotCount {
+                delegate?.passwordInputComplete(self, input: inputString)
+            }
+        #else
+            if inputString.characters.count == passwordDotView.totalDotCount {
             delegate?.passwordInputComplete(self, input: inputString)
-        }
+            }
+        #endif
     }
+    
     func configureVibrancyEffect() {
         let whiteColor = UIColor.white
         let clearColor = UIColor.clear
@@ -243,9 +262,16 @@ private extension PasswordContainerView {
 
 extension PasswordContainerView: PasswordInputViewTappedProtocol {
     public func passwordInputView(_ passwordInputView: PasswordInputView, tappedString: String) {
-        guard inputString.characters.count < passwordDotView.totalDotCount else {
+        #if swift(>=3.2)
+            guard inputString.count < passwordDotView.totalDotCount else {
+                return
+            }
+        #else
+            guard inputString.characters.count < passwordDotView.totalDotCount else {
             return
-        }
+            }
+        #endif
+
         inputString += tappedString
     }
 }
