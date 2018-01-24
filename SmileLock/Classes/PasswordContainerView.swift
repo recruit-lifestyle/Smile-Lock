@@ -145,7 +145,7 @@ open class PasswordContainerView: UIView {
         var image = touchAuthenticationButton.imageView?.image?.withRenderingMode(.alwaysTemplate)
         
         if #available(iOS 11, *) {
-            if touchIDContext.biometryType == .typeFaceID {
+            if touchIDContext.biometryType == .faceID {
                 let bundle = Bundle(for: type(of: self))
                 image = UIImage(named: "faceid", in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
             }

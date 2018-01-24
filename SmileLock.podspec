@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SmileLock"
-  s.version      = "3.0.1"
+  s.version      = "3.0.2"
   s.summary      = "A library for make a beautiful Passcode Lock View."
   s.description  = <<-DESC
                    1. Create a beautiful passcode lock view simply.
@@ -22,5 +22,6 @@ Pod::Spec.new do |s|
   s.source_files  = 'SmileLock/Classes/*.{swift}'
   s.resources = 'SmileLock/Assets/*'
   s.frameworks = 'UIKit'
+  s.weak_framework = 'LocalAuthentication'
 
 end
