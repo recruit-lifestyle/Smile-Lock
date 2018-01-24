@@ -141,7 +141,16 @@ open class PasswordContainerView: UIView {
         deleteButton.titleLabel?.adjustsFontSizeToFitWidth = true
         deleteButton.titleLabel?.minimumScaleFactor = 0.5
         touchAuthenticationEnabled = true
-        let image = touchAuthenticationButton.imageView?.image?.withRenderingMode(.alwaysTemplate)
+        
+        var image = touchAuthenticationButton.imageView?.image?.withRenderingMode(.alwaysTemplate)
+        
+        if #available(iOS 11, *) {
+            if touchIDContext.biometryType == .typeFaceID {
+                let bundle = Bundle(for: type(of: self))
+                image = UIImage(named: "faceid", in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+            }
+        }
+        
         touchAuthenticationButton.setImage(image, for: UIControlState())
         touchAuthenticationButton.tintColor = tintColor
     }
