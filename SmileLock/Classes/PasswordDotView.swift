@@ -10,6 +10,7 @@ import UIKit
 @IBDesignable
 open class PasswordDotView: UIView {
     
+    
     //MARK: Property
     @IBInspectable
     open var inputDotCount = 0 {
