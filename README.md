@@ -26,7 +26,7 @@ A library for make a beautiful Passcode Lock View, also support Touch ID.
 
 ``` swift
 let kPasswordDigit = 6
-passwordContainerView = PasswordContainerView.createWithDigit(kPasswordDigit)
+passwordContainerView = PasswordContainerView.create(withDigit: kPasswordDigit)
 ```
 
 #### 2. Passcode input completed delegate callback.
