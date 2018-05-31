@@ -20,9 +20,10 @@ open class PasswordInputView: UIView {
     let circleView = UIView()
     let button = UIButton()
     open let label = UILabel()
+    open var labelFont: UIFont?
     fileprivate let fontSizeRatio: CGFloat = 46 / 40
     fileprivate let borderWidthRatio: CGFloat = 1 / 26
-    fileprivate var touchUpFlag = false
+    fileprivate var touchUpFlag = true
     fileprivate(set) open var isAnimating = false
     var isVibrancyEffect = false
     
@@ -96,6 +97,18 @@ open class PasswordInputView: UIView {
         updateUI()
     }
     
+    fileprivate func getLabelFont() -> UIFont {
+        if labelFont != nil {
+            return labelFont!
+        }
+        
+        let width = bounds.width
+        let height = bounds.height
+        let radius = min(width, height) / 2
+        return UIFont.systemFont(ofSize: radius * fontSizeRatio,
+                                 weight: touchUpFlag ? UIFont.Weight.thin : UIFont.Weight.regular)
+    }
+    
     fileprivate func updateUI() {
         //prepare calculate
         let width = bounds.width
@@ -107,7 +120,9 @@ open class PasswordInputView: UIView {
         
         //update label
         label.text = numberString
-        label.font = UIFont.systemFont(ofSize: radius * fontSizeRatio, weight: UIFont.Weight.thin)
+        
+        label.font = getLabelFont()
+        
         label.textColor = textColor
         
         //update circle view
@@ -147,8 +162,7 @@ private extension PasswordInputView {
     
     //MARK: Animation
     func touchDownAction() {
-        let originFont = label.font
-        label.font = UIFont.systemFont(ofSize: originFont!.pointSize, weight: UIFont.Weight.light)
+        label.font = getLabelFont()
         label.textColor = highlightTextColor
         if !self.isVibrancyEffect {
             backgroundColor = highlightBackgroundColor
@@ -157,8 +171,7 @@ private extension PasswordInputView {
     }
     
     func touchUpAction() {
-        let originFont = label.font
-        label.font = UIFont.systemFont(ofSize: originFont!.pointSize, weight: UIFont.Weight.thin)
+        label.font = getLabelFont()
         label.textColor = textColor
         backgroundColor = borderColor
         circleView.backgroundColor = circleBackgroundColor
