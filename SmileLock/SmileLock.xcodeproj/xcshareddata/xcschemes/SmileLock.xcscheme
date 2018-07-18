@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F36D591B20FF4698002FD8BF"
-               BuildableName = "Smile_Lock.framework"
-               BlueprintName = "Smile Lock"
-               ReferencedContainer = "container:Smile Lock.xcodeproj">
+               BlueprintIdentifier = "F373752120FF72080000A50A"
+               BuildableName = "SmileLock.framework"
+               BlueprintName = "SmileLock"
+               ReferencedContainer = "container:SmileLock.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,10 +47,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F36D591B20FF4698002FD8BF"
-            BuildableName = "Smile_Lock.framework"
-            BlueprintName = "Smile Lock"
-            ReferencedContainer = "container:Smile Lock.xcodeproj">
+            BlueprintIdentifier = "F373752120FF72080000A50A"
+            BuildableName = "SmileLock.framework"
+            BlueprintName = "SmileLock"
+            ReferencedContainer = "container:SmileLock.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,10 +65,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F36D591B20FF4698002FD8BF"
-            BuildableName = "Smile_Lock.framework"
-            BlueprintName = "Smile Lock"
-            ReferencedContainer = "container:Smile Lock.xcodeproj">
+            BlueprintIdentifier = "F373752120FF72080000A50A"
+            BuildableName = "SmileLock.framework"
+            BlueprintName = "SmileLock"
+            ReferencedContainer = "container:SmileLock.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
