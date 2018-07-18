@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F36D592120FF4698002FD8BF /* Smile_Lock.h in Headers */ = {isa = PBXBuildFile; fileRef = F36D591F20FF4698002FD8BF /* Smile_Lock.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F36D592F20FF46E0002FD8BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36D592820FF46E0002FD8BF /* Assets.xcassets */; };
-		F36D593020FF46E0002FD8BF /* PasswordContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36D592920FF46E0002FD8BF /* PasswordContainerView.xib */; };
-		F36D593120FF46E0002FD8BF /* PasswordContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36D592B20FF46E0002FD8BF /* PasswordContainerView.swift */; };
-		F36D593220FF46E0002FD8BF /* PasswordDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36D592C20FF46E0002FD8BF /* PasswordDotView.swift */; };
-		F36D593320FF46E0002FD8BF /* PasswordInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36D592D20FF46E0002FD8BF /* PasswordInputView.swift */; };
-		F36D593420FF46E0002FD8BF /* PasswordUIValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36D592E20FF46E0002FD8BF /* PasswordUIValidation.swift */; };
+		F373752720FF72080000A50A /* SmileLock.h in Headers */ = {isa = PBXBuildFile; fileRef = F373752520FF72080000A50A /* SmileLock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F373753520FF72080000A50A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F373752E20FF72080000A50A /* Assets.xcassets */; };
+		F373753620FF72080000A50A /* PasswordContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F373752F20FF72080000A50A /* PasswordContainerView.xib */; };
+		F373753720FF72080000A50A /* PasswordContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373753120FF72080000A50A /* PasswordContainerView.swift */; };
+		F373753820FF72080000A50A /* PasswordDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373753220FF72080000A50A /* PasswordDotView.swift */; };
+		F373753920FF72080000A50A /* PasswordInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373753320FF72080000A50A /* PasswordInputView.swift */; };
+		F373753A20FF72080000A50A /* PasswordUIValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373753420FF72080000A50A /* PasswordUIValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F36D591C20FF4698002FD8BF /* Smile_Lock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Smile_Lock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F36D591F20FF4698002FD8BF /* Smile_Lock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Smile_Lock.h; sourceTree = "<group>"; };
-		F36D592020FF4698002FD8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F36D592820FF46E0002FD8BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F36D592920FF46E0002FD8BF /* PasswordContainerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordContainerView.xib; sourceTree = "<group>"; };
-		F36D592B20FF46E0002FD8BF /* PasswordContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordContainerView.swift; sourceTree = "<group>"; };
-		F36D592C20FF46E0002FD8BF /* PasswordDotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordDotView.swift; sourceTree = "<group>"; };
-		F36D592D20FF46E0002FD8BF /* PasswordInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordInputView.swift; sourceTree = "<group>"; };
-		F36D592E20FF46E0002FD8BF /* PasswordUIValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordUIValidation.swift; sourceTree = "<group>"; };
+		F373752220FF72080000A50A /* SmileLock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmileLock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F373752520FF72080000A50A /* SmileLock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmileLock.h; sourceTree = "<group>"; };
+		F373752620FF72080000A50A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F373752E20FF72080000A50A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F373752F20FF72080000A50A /* PasswordContainerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordContainerView.xib; sourceTree = "<group>"; };
+		F373753120FF72080000A50A /* PasswordContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordContainerView.swift; sourceTree = "<group>"; };
+		F373753220FF72080000A50A /* PasswordDotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordDotView.swift; sourceTree = "<group>"; };
+		F373753320FF72080000A50A /* PasswordInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordInputView.swift; sourceTree = "<group>"; };
+		F373753420FF72080000A50A /* PasswordUIValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordUIValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F36D591820FF4698002FD8BF /* Frameworks */ = {
+		F373751E20FF72080000A50A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,49 +39,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F36D591220FF4698002FD8BF = {
+		F373751820FF72080000A50A = {
 			isa = PBXGroup;
 			children = (
-				F36D591E20FF4698002FD8BF /* Smile Lock */,
-				F36D591D20FF4698002FD8BF /* Products */,
+				F373752420FF72080000A50A /* SmileLock */,
+				F373752320FF72080000A50A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F36D591D20FF4698002FD8BF /* Products */ = {
+		F373752320FF72080000A50A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F36D591C20FF4698002FD8BF /* Smile_Lock.framework */,
+				F373752220FF72080000A50A /* SmileLock.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F36D591E20FF4698002FD8BF /* Smile Lock */ = {
+		F373752420FF72080000A50A /* SmileLock */ = {
 			isa = PBXGroup;
 			children = (
-				F36D592720FF46E0002FD8BF /* Assets */,
-				F36D592A20FF46E0002FD8BF /* Classes */,
-				F36D591F20FF4698002FD8BF /* Smile_Lock.h */,
-				F36D592020FF4698002FD8BF /* Info.plist */,
+				F373752D20FF72080000A50A /* Assets */,
+				F373753020FF72080000A50A /* Classes */,
+				F373752520FF72080000A50A /* SmileLock.h */,
+				F373752620FF72080000A50A /* Info.plist */,
 			);
-			path = "Smile Lock";
+			path = SmileLock;
 			sourceTree = "<group>";
 		};
-		F36D592720FF46E0002FD8BF /* Assets */ = {
+		F373752D20FF72080000A50A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				F36D592820FF46E0002FD8BF /* Assets.xcassets */,
-				F36D592920FF46E0002FD8BF /* PasswordContainerView.xib */,
+				F373752E20FF72080000A50A /* Assets.xcassets */,
+				F373752F20FF72080000A50A /* PasswordContainerView.xib */,
 			);
 			path = Assets;
 			sourceTree = SOURCE_ROOT;
 		};
-		F36D592A20FF46E0002FD8BF /* Classes */ = {
+		F373753020FF72080000A50A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F36D592B20FF46E0002FD8BF /* PasswordContainerView.swift */,
-				F36D592C20FF46E0002FD8BF /* PasswordDotView.swift */,
-				F36D592D20FF46E0002FD8BF /* PasswordInputView.swift */,
-				F36D592E20FF46E0002FD8BF /* PasswordUIValidation.swift */,
+				F373753120FF72080000A50A /* PasswordContainerView.swift */,
+				F373753220FF72080000A50A /* PasswordDotView.swift */,
+				F373753320FF72080000A50A /* PasswordInputView.swift */,
+				F373753420FF72080000A50A /* PasswordUIValidation.swift */,
 			);
 			path = Classes;
 			sourceTree = SOURCE_ROOT;
@@ -89,95 +89,95 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F36D591920FF4698002FD8BF /* Headers */ = {
+		F373751F20FF72080000A50A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F36D592120FF4698002FD8BF /* Smile_Lock.h in Headers */,
+				F373752720FF72080000A50A /* SmileLock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F36D591B20FF4698002FD8BF /* Smile Lock */ = {
+		F373752120FF72080000A50A /* SmileLock */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F36D592420FF4698002FD8BF /* Build configuration list for PBXNativeTarget "Smile Lock" */;
+			buildConfigurationList = F373752A20FF72080000A50A /* Build configuration list for PBXNativeTarget "SmileLock" */;
 			buildPhases = (
-				F36D591720FF4698002FD8BF /* Sources */,
-				F36D591820FF4698002FD8BF /* Frameworks */,
-				F36D591920FF4698002FD8BF /* Headers */,
-				F36D591A20FF4698002FD8BF /* Resources */,
+				F373751D20FF72080000A50A /* Sources */,
+				F373751E20FF72080000A50A /* Frameworks */,
+				F373751F20FF72080000A50A /* Headers */,
+				F373752020FF72080000A50A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Smile Lock";
-			productName = "Smile Lock";
-			productReference = F36D591C20FF4698002FD8BF /* Smile_Lock.framework */;
+			name = SmileLock;
+			productName = SmileLock;
+			productReference = F373752220FF72080000A50A /* SmileLock.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F36D591320FF4698002FD8BF /* Project object */ = {
+		F373751920FF72080000A50A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Smile Lock";
 				TargetAttributes = {
-					F36D591B20FF4698002FD8BF = {
+					F373752120FF72080000A50A = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = F36D591620FF4698002FD8BF /* Build configuration list for PBXProject "Smile Lock" */;
+			buildConfigurationList = F373751C20FF72080000A50A /* Build configuration list for PBXProject "SmileLock" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = F36D591220FF4698002FD8BF;
-			productRefGroup = F36D591D20FF4698002FD8BF /* Products */;
+			mainGroup = F373751820FF72080000A50A;
+			productRefGroup = F373752320FF72080000A50A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F36D591B20FF4698002FD8BF /* Smile Lock */,
+				F373752120FF72080000A50A /* SmileLock */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F36D591A20FF4698002FD8BF /* Resources */ = {
+		F373752020FF72080000A50A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F36D592F20FF46E0002FD8BF /* Assets.xcassets in Resources */,
-				F36D593020FF46E0002FD8BF /* PasswordContainerView.xib in Resources */,
+				F373753520FF72080000A50A /* Assets.xcassets in Resources */,
+				F373753620FF72080000A50A /* PasswordContainerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F36D591720FF4698002FD8BF /* Sources */ = {
+		F373751D20FF72080000A50A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F36D593120FF46E0002FD8BF /* PasswordContainerView.swift in Sources */,
-				F36D593420FF46E0002FD8BF /* PasswordUIValidation.swift in Sources */,
-				F36D593320FF46E0002FD8BF /* PasswordInputView.swift in Sources */,
-				F36D593220FF46E0002FD8BF /* PasswordDotView.swift in Sources */,
+				F373753720FF72080000A50A /* PasswordContainerView.swift in Sources */,
+				F373753A20FF72080000A50A /* PasswordUIValidation.swift in Sources */,
+				F373753920FF72080000A50A /* PasswordInputView.swift in Sources */,
+				F373753820FF72080000A50A /* PasswordDotView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		F36D592220FF4698002FD8BF /* Debug */ = {
+		F373752820FF72080000A50A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -237,7 +237,7 @@
 			};
 			name = Debug;
 		};
-		F36D592320FF4698002FD8BF /* Release */ = {
+		F373752920FF72080000A50A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -290,7 +290,7 @@
 			};
 			name = Release;
 		};
-		F36D592520FF4698002FD8BF /* Debug */ = {
+		F373752B20FF72080000A50A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -299,10 +299,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Smile Lock/Info.plist";
+				INFOPLIST_FILE = SmileLock/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.Smile-Lock";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.SmileLock;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -310,7 +310,7 @@
 			};
 			name = Debug;
 		};
-		F36D592620FF4698002FD8BF /* Release */ = {
+		F373752C20FF72080000A50A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -319,10 +319,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Smile Lock/Info.plist";
+				INFOPLIST_FILE = SmileLock/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.Smile-Lock";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.SmileLock;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -333,25 +333,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F36D591620FF4698002FD8BF /* Build configuration list for PBXProject "Smile Lock" */ = {
+		F373751C20FF72080000A50A /* Build configuration list for PBXProject "SmileLock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F36D592220FF4698002FD8BF /* Debug */,
-				F36D592320FF4698002FD8BF /* Release */,
+				F373752820FF72080000A50A /* Debug */,
+				F373752920FF72080000A50A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F36D592420FF4698002FD8BF /* Build configuration list for PBXNativeTarget "Smile Lock" */ = {
+		F373752A20FF72080000A50A /* Build configuration list for PBXNativeTarget "SmileLock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F36D592520FF4698002FD8BF /* Debug */,
-				F36D592620FF4698002FD8BF /* Release */,
+				F373752B20FF72080000A50A /* Debug */,
+				F373752C20FF72080000A50A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F36D591320FF4698002FD8BF /* Project object */;
+	rootObject = F373751920FF72080000A50A /* Project object */;
 }
