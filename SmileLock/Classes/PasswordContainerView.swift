@@ -185,7 +185,7 @@ open class PasswordContainerView: UIView {
         touchAuthentication()
     }
     
-    public func touchAuthentication() {
+    open func touchAuthentication() {
         guard isTouchAuthenticationAvailable else { return }
         touchIDContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: touchAuthenticationReason) { (success, error) in
             DispatchQueue.main.async {
