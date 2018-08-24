@@ -152,12 +152,14 @@ private extension PasswordInputView {
         //configure label
         NSLayoutConstraint.addEqualConstraintsFromSubView(label, toSuperView: self)
         label.textAlignment = .center
+        label.isAccessibilityElement = false
         
         //configure button
         NSLayoutConstraint.addEqualConstraintsFromSubView(button, toSuperView: self)
         button.isExclusiveTouch = true
         button.addTarget(self, action: #selector(PasswordInputView.touchDown), for: [.touchDown])
         button.addTarget(self, action: #selector(PasswordInputView.touchUp), for: [.touchUpInside, .touchDragOutside, .touchCancel, .touchDragExit])
+        button.accessibilityValue = numberString
     }
     
     //MARK: Animation
