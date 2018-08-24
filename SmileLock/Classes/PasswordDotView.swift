@@ -14,6 +14,8 @@ open class PasswordDotView: UIView {
     @IBInspectable
     open var inputDotCount = 0 {
         didSet {
+            accessibilityLabel = "パスワード"
+            accessibilityValue = String(format: "%d個ちゅう%d個が入力されています", totalDotCount, inputDotCount)
             setNeedsDisplay()
         }
     }
@@ -69,6 +71,7 @@ open class PasswordDotView: UIView {
     open override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = UIColor.clear
+        isAccessibilityElement = true
     }
     open override func layoutSubviews() {
         super.layoutSubviews()
