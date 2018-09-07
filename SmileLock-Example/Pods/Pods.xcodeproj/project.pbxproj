@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C2EA93DE8622D1F11F2AD00654133D3 /* PasswordUIValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B18169A700B612B3F863F2CE365671A /* PasswordUIValidation.swift */; };
+		1D5F2193212FF87200AFEA02 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D5F2191212FF87200AFEA02 /* Localizable.strings */; };
 		2FE3C82CAF753A62B3C673975657EAB3 /* PasswordContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 782077606F89C1249B4BFF1972AB0BD5 /* PasswordContainerView.xib */; };
 		38D6CBB5B9D1F947D1C3B5827E023AC6 /* SmileLock-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BBEF4C23DAF552BB52E58F1F0B3677BA /* SmileLock-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		571934E483C4FB6ED8CAF608ED5C81BD /* PasswordInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AC8DB3251E1463F761E3CEF88D548A /* PasswordInputView.swift */; };
@@ -35,6 +36,8 @@
 /* Begin PBXFileReference section */
 		0C56AA50158983C14B71275CEA70B9D8 /* PasswordDotView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PasswordDotView.swift; sourceTree = "<group>"; };
 		14EA57A308EC1B78534BCBC8981AD494 /* Pods-SmileLock-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmileLock-Example-frameworks.sh"; sourceTree = "<group>"; };
+		1D5F2192212FF87200AFEA02 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ../../Localizable/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1D7E32E4214242FA00A5227D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../../Localizable/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2358AE01938DB09B2D3952F956721223 /* Pods-SmileLock-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmileLock-Example-resources.sh"; sourceTree = "<group>"; };
 		25AFF6969B408F2206B0CBB8A74DBA8B /* Pods-SmileLock-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmileLock-Example.release.xcconfig"; sourceTree = "<group>"; };
 		279E8767BFEDA0EBC710CC47C8528629 /* SmileLock-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmileLock-prefix.pch"; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 			children = (
 				782077606F89C1249B4BFF1972AB0BD5 /* PasswordContainerView.xib */,
 				AE7AB29D1D3EC82400E8C9A3 /* Assets.xcassets */,
+				1D5F2191212FF87200AFEA02 /* Localizable.strings */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -304,6 +308,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ja,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
 			productRefGroup = 82C452AF10C4675854B4E9B9C27E479A /* Products */;
@@ -322,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE24929F1D3F56B6001EEE96 /* Assets.xcassets in Resources */,
+				1D5F2193212FF87200AFEA02 /* Localizable.strings in Resources */,
 				2FE3C82CAF753A62B3C673975657EAB3 /* PasswordContainerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +365,18 @@
 			targetProxy = 1F23995B81956D585EB9281F3BF20F78 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D5F2191212FF87200AFEA02 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D5F2192212FF87200AFEA02 /* ja */,
+				1D7E32E4214242FA00A5227D /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2BA259EFE267BC7D8B85E27612D8B80B /* Debug */ = {

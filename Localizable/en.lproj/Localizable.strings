@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Pods
+
+  Created by 阿部 諒 on 2018/08/03.
+  
+*/
+
+"PasswordDotViewAccessibilityLabel" = "Passcode";
+"PasswordDotViewAccessibilityValue" = "%d of %d enterd";
