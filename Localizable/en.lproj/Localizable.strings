@@ -6,5 +6,5 @@
   
 */
 
-"PasswordDotViewAccessibilityLabel" = "Passcode";
-"PasswordDotViewAccessibilityValue" = "%d of %d enterd";
+"PasswordDotViewAccessibilityLabel" = "Passcode Field";
+"PasswordDotViewAccessibilityValue" = "%d of %d entered";
