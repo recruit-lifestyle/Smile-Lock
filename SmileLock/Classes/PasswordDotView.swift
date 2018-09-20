@@ -14,6 +14,8 @@ open class PasswordDotView: UIView {
     @IBInspectable
     open var inputDotCount = 0 {
         didSet {
+            let format = Bundle(for: type(of: self)).localizedString(forKey: "PasswordDotViewAccessibilityValue", value: nil, table: nil)
+            accessibilityValue = String(format: format, totalDotCount, inputDotCount)
             setNeedsDisplay()
         }
     }
@@ -69,6 +71,8 @@ open class PasswordDotView: UIView {
     open override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = UIColor.clear
+        isAccessibilityElement = true
+        accessibilityLabel = Bundle(for: type(of: self)).localizedString(forKey: "PasswordDotViewAccessibilityLabel", value: nil, table: nil)
     }
     open override func layoutSubviews() {
         super.layoutSubviews()
