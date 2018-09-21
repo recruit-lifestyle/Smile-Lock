@@ -41,4 +41,11 @@ class BlurPasswordLoginViewController: UIViewController {
 //             inputView.labelFont = UIFont(name: "Chalkduster", size: 29)
 //        }
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//
+//        // manually initiate biometric authentication
+//        self.passwordUIValidation.view.touchAuthentication()
+//    }
 }
