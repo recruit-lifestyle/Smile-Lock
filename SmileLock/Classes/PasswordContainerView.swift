@@ -194,7 +194,11 @@ open class PasswordContainerView: UIView {
                     // instantiate LAContext again for avoiding the situation that PasswordContainerView stay in memory when authenticate successfully
                     self.touchIDContext = LAContext()
                 }
-                self.delegate?.touchAuthenticationComplete(self, success: success, error: error)
+                
+                // delay delegate callback for the user can see passwordDotView input dots filled animation
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    self.delegate?.touchAuthenticationComplete(self, success: success, error: error)
+                }
             }
         }
     }
