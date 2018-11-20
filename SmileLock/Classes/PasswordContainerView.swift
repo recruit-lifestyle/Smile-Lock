@@ -52,7 +52,7 @@ open class PasswordContainerView: UIView {
     open override var tintColor: UIColor! {
         didSet {
             guard !isVibrancyEffect else { return }
-            deleteButton.setTitleColor(tintColor, for: UIControl.State())
+            deleteButton.setTitleColor(tintColor, for: .normal)
             passwordDotView.strokeColor = tintColor
             touchAuthenticationButton.tintColor = tintColor
             passwordInputViews.forEach {
@@ -151,7 +151,7 @@ open class PasswordContainerView: UIView {
             }
         }
         
-        touchAuthenticationButton.setImage(image, for: UIControl.State())
+        touchAuthenticationButton.setImage(image, for: .normal)
         touchAuthenticationButton.tintColor = tintColor
     }
     
