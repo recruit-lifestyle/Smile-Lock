@@ -76,7 +76,7 @@ passwordContainerView.highlightedColor = UIColor.color(.blue)
 If you want to see no visual effect, change the property `isBlurUI` to `false` in `HomeViewController.swift`.
 
 
-#How to use it for your project?
+# How to use it for your project?
 
 SmileLock is available through use [CocoaPods](http://cocoapods.org).
 
