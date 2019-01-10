@@ -19,7 +19,7 @@ open class PasswordInputView: UIView {
     
     let circleView = UIView()
     let button = UIButton()
-    open let label = UILabel()
+    public let label = UILabel()
     open var labelFont: UIFont?
     fileprivate let fontSizeRatio: CGFloat = 46 / 40
     fileprivate let borderWidthRatio: CGFloat = 1 / 26
