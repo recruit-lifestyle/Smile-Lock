@@ -63,10 +63,12 @@ open class PasswordInputView: UIView {
     
     //MARK: Life Cycle
     #if TARGET_INTERFACE_BUILDER
-    override public func willMoveToSuperview(newSuperview: UIView?) {
+    open override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
         configureSubviews()
     }
     #else
+
     override open func awakeFromNib() {
         super.awakeFromNib()
         configureSubviews()
