@@ -1,0 +1,11 @@
+platform :ios, '9.0'
+
+target 'SmileLock-Example' do
+    
+pod 'SmileLock', :path => "../"
+
+#pod 'SmileLock'
+
+use_frameworks!
+
+end

@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  SmileLock-Example
+
+  Created by rain on 2017/04/18.
+  Copyright © 2017 rain. All rights reserved.
+*/
+
+"smilelock_delete" = "Delete";
