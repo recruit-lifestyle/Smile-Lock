@@ -8,7 +8,7 @@
 import UIKit
 import LocalAuthentication
 
-public protocol PasswordInputCompleteProtocol: class {
+public protocol PasswordInputCompleteProtocol: AnyObject {
     func passwordInputComplete(_ passwordContainerView: PasswordContainerView, input: String)
     func touchAuthenticationComplete(_ passwordContainerView: PasswordContainerView, success: Bool, error: Error?)
 }
