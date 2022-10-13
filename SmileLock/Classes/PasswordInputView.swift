@@ -120,6 +120,10 @@ open class PasswordInputView: UIView {
         let borderWidth = radius * borderWidthRatio
         let circleRadius = radius - borderWidth
         
+        //added by @seiritu
+        if (numberString.isEmpty) {
+            numberString = "0"
+        }
         //update label
         label.text = numberString
         
